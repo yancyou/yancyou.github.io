@@ -1,23 +1,24 @@
-Welcome to my homepage. I am a junior undergraduate student majoring in **[<span style="color:#0400ff">Computer Science</span>](https://www.cs.wisc.edu/)** (**[<span style="color:#0400ff">UW-Madison, CDIS</span>](https://cdis.wisc.edu/)**, CS#13). PMy research/internship experience covers Peking University SEKE Lab (advised by Prof. [<span style="color:#0400ff">Jin Zhi</span>](https://example.com/jinzhi)) and Prof. [<span style="color:#0400ff">Li Ge</span>](https://example.com/lige)), Tsinghua University CoAI Lab (advised by Prof. [<span style="color:#0400ff">Zhang ByteDance</span>](https://example.com/zhangbytedance), Zhipu, Zen-AI, and now in DeepLearning Group (advised by Prof. [<span style="color:#0400ff">Sharon Li</span>](https://example.com/sharonli)). I am very grateful to the above institutions, mentors and collaborators.
-
-I have experience in **NLP and computer systems**(both architecture and high performance machine learning systems), along with extensive industry research internship experience. This includes:
-
-* Participating in the pretraining of the **Yi-Lightning model** at [<span style="color:#0400ff">01.AI</span>](https://01.ai/).
-* Contributing to ML Infra of the pretraining of the foundation model at ModelBest (with TsinghuaNLP).
-* Participating in the finetuning of the CodeLLM [<span style="color:#0400ff">Raccoon</span>](https://raccoon.sensetime.com/code) (Copilot-like) at SenseTime (with CUHK MMLab).
+Welcome to my homepage. I am a junior undergraduate student majoring in **[<span style="color:#0400ff">Computer Science</span>](https://www.cs.wisc.edu/)** (**[<span style="color:#0400ff">UW-Madison, CDIS</span>](https://cdis.wisc.edu/)**, CS#13). My research/internship experience covers [<span style="color:#0400ff">Shanghai Jiao Tong University Epic Lab</span>](https://github.com/SJTU-EPIC-Lab) (advised by Prof. [<span style="color:#0400ff">Linfeng Zhang</span>](http://www.zhanglinfeng.tech/) and work with my mentor [<span style="color:#0400ff">Shaobo Wang</span>](https://gszfwsb.github.io/)). University College London (work with Dr. [<span style="color:#0400ff">Yujian Gan</span>](https://profiles.ucl.ac.uk/100730-yujian-gan)). I'm also a machine learning research assistant in [<span style="color:#0400ff">UW-Madison Marler Lab</span>](https://marlerlab.psych.wisc.edu/)(advised by Prof. [<span style="color:#0400ff">Catherine Marler</span>](https://marlerlab.psych.wisc.edu/staff/marler-catherine/)). I am very grateful to the above institutions, mentors and collaborators.
 
 #### Research Interests
 
-My current passion revolves around building **EFFICIENT** system solutions to AGI (**Now I am interested in O1-like models ML Infra**), this includes:
+My current passion revolves around building AI systems that not only perceive and generate across modalities, but also reason, act, and learn from the world in a data-driven, tool-empowered fashion—advancing us toward truly intelligent, context-aware agents. Which includes:
 
-1. **Machine Learning System** 
-    * Training: Design more effective training system and algorithms, example includes [<span style="color:#0400ff">BMTrain</span>](https://github.com/OpenBMB/BMTrain).
-    * Parameter Efficient Fine Tuning (PEFT): Improve LoRA-like architecture and low bit model compression. example includes [<span style="color:#0400ff">IAPT</span>](https://aclanthology.org/2024.acl-long.771.pdf). 
-    * Long context inference: example includes [<span style="color:#0400ff">Cross Layer Attention</span>](https://github.com/JerryYin777/Cross-Layer-Attention).
-2. **LLM & LLM applications** 
-    * CodeLLM
-    * Foundation LLM (Yi-lightning)
-    * RAG (GraphRAG): Examples includes [<span style="color:#0400ff">PaperHelper</span>](https://github.com/JerryYin777/PaperHelper).
+1. **Multimodal LLMs**  
+
+    Build scalable transformer architectures that integrate visual, textual, and auditory modalities—leveraging modality-specific encoders and joint training objectives—to enable unified understanding and generation across diverse sensory inputs.
+
+2. **Agent Tool Use**  
+
+    Design intelligent agent frameworks where LLMs plan and orchestrate external API calls, database queries, and code execution—incorporating dynamic tool selection, stateful memory, and error-handling—to accomplish complex, multi-step tasks autonomously.
+
+3. **Multimodal Reasoning**  
+
+    Develop cross-modal reasoning frameworks that align and fuse heterogeneous signals—using hierarchical attention, graph-based representations, and consistency objectives—to enable agents to perform robust inference and decision-making across visual, textual, and auditory data streams.
+
+4. **Data-Centric AI**  
+
+    Build end-to-end pipelines for curating, validating, and augmenting datasets—measuring coverage, balance, and consistency—to ensure every model component is trained on high-quality, representative examples.
 
 #### Misc
 
