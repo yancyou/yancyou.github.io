@@ -630,7 +630,7 @@ section .main-body{
     position: absolute;
     width: 100%;
     text-align: center;
-    top: 50px;
+    top: 170px; /* 修改这个值可以上下移动标语 */
     z-index: 10;
 }
 
@@ -645,7 +645,8 @@ section .main-body{
     letter-spacing: 0.05em;
     padding: 0.5rem 1rem;
     transform: rotate(-2deg);
-    animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate, float 6s ease-in-out infinite;
+    display: inline-block;
 }
 
 @keyframes glow {
@@ -662,6 +663,18 @@ section .main-body{
     }
 }
 
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(-2deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(-1deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(-2deg);
+    }
+}
+
 /* 移动设备上的标语样式调整 */
 @media screen and (max-width: 768px) {
     .tagline {
@@ -670,7 +683,18 @@ section .main-body{
     }
     
     .tagline-container {
-        top: 40px;
+        top: 130px; /* 移动设备上的位置 */
+    }
+}
+
+/* 大屏幕设备上的标语样式调整 */
+@media screen and (min-width: 1200px) {
+    .tagline-container {
+        top: 200px; /* 大屏幕上的位置 */
+    }
+    
+    .tagline {
+        font-size: 3.2rem; /* 大屏幕上的字体大小 */
     }
 }
 
