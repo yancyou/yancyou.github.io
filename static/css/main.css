@@ -698,7 +698,7 @@ section .main-body{
     }
 }
 
-/* 字符弹出效果标语样式 */
+/* 打字效果标语样式 */
 .typewriter-container {
     font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     text-align: center;
@@ -709,119 +709,85 @@ section .main-body{
     margin-top: 20px;
 }
 
+.typewriter-wrapper {
+    position: relative;
+    margin-bottom: 10px;
+}
+
 .tagline-main {
     color: #ffffff;
-    font-size: 3.6rem;
+    font-size: 3.8rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 
                  0 0 10px rgba(78, 84, 200, 0.8),
                  0 0 20px rgba(78, 84, 200, 0.5);
-    letter-spacing: 0.05em;
+    letter-spacing: -0.02em; /* 负值使字母更紧凑 */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid transparent;
+    width: 0;
+    animation: typing-main 3s steps(20, end) forwards,
+               blink-caret 0.75s step-end infinite;
+    animation-delay: 0.5s;
 }
 
 .tagline-sub {
     color: #ffffff;
-    font-size: 2.4rem;
-    font-weight: 500;
+    font-size: 3.0rem; /* 放大第二行字体 */
+    font-weight: 600;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    letter-spacing: 0.02em;
-    margin-top: 0.5rem;
-}
-
-.pop-char, .pop-char-sub {
-    display: inline-block;
+    letter-spacing: -0.01em; /* 负值使字母更紧凑 */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #fff;
+    width: 0;
     opacity: 0;
-    transform: scale(0.3) translateY(20px);
-    animation-name: pop-in;
-    animation-duration: 0.6s;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); /* 弹性缓动 */
+    animation: typing-sub 2s steps(16, end) forwards,
+               blink-caret 0.75s step-end infinite 3.5s,
+               fade-in 0.1s ease 3.5s forwards;
+    animation-delay: 3.5s;
 }
 
-.pop-char-sub {
-    animation-delay: 1.5s; /* 第二行开始动画的延迟 */
+@keyframes typing-main {
+    from { width: 0 }
+    to { width: 100% }
 }
 
-/* 为每个字符设置不同的动画延迟 - 第一行 */
-.tagline-main .pop-char:nth-child(1) { animation-delay: 0.1s; }
-.tagline-main .pop-char:nth-child(2) { animation-delay: 0.2s; }
-.tagline-main .pop-char:nth-child(3) { animation-delay: 0.3s; }
-.tagline-main .pop-char:nth-child(4) { animation-delay: 0.4s; }
-.tagline-main .pop-char:nth-child(5) { animation-delay: 0.5s; }
-.tagline-main .pop-char:nth-child(6) { animation-delay: 0.6s; }
-.tagline-main .pop-char:nth-child(7) { animation-delay: 0.7s; }
-.tagline-main .pop-char:nth-child(8) { animation-delay: 0.8s; }
-.tagline-main .pop-char:nth-child(9) { animation-delay: 0.9s; }
-.tagline-main .pop-char:nth-child(10) { animation-delay: 1.0s; }
-.tagline-main .pop-char:nth-child(11) { animation-delay: 1.1s; }
-.tagline-main .pop-char:nth-child(12) { animation-delay: 1.2s; }
-.tagline-main .pop-char:nth-child(13) { animation-delay: 1.3s; }
-.tagline-main .pop-char:nth-child(14) { animation-delay: 1.4s; }
-.tagline-main .pop-char:nth-child(15) { animation-delay: 1.5s; }
-.tagline-main .pop-char:nth-child(16) { animation-delay: 1.6s; }
-.tagline-main .pop-char:nth-child(17) { animation-delay: 1.7s; }
-.tagline-main .pop-char:nth-child(18) { animation-delay: 1.8s; }
-.tagline-main .pop-char:nth-child(19) { animation-delay: 1.9s; }
-.tagline-main .pop-char:nth-child(20) { animation-delay: 2.0s; }
-.tagline-main .pop-char:nth-child(21) { animation-delay: 2.1s; }
-.tagline-main .pop-char:nth-child(22) { animation-delay: 2.2s; }
+@keyframes typing-sub {
+    from { width: 0 }
+    to { width: 100% }
+}
 
-/* 为每个字符设置不同的动画延迟 - 第二行 */
-.tagline-sub .pop-char-sub:nth-child(1) { animation-delay: 2.5s; }
-.tagline-sub .pop-char-sub:nth-child(2) { animation-delay: 2.58s; }
-.tagline-sub .pop-char-sub:nth-child(3) { animation-delay: 2.66s; }
-.tagline-sub .pop-char-sub:nth-child(4) { animation-delay: 2.74s; }
-.tagline-sub .pop-char-sub:nth-child(5) { animation-delay: 2.82s; }
-.tagline-sub .pop-char-sub:nth-child(6) { animation-delay: 2.9s; }
-.tagline-sub .pop-char-sub:nth-child(7) { animation-delay: 2.98s; }
-.tagline-sub .pop-char-sub:nth-child(8) { animation-delay: 3.06s; }
-.tagline-sub .pop-char-sub:nth-child(9) { animation-delay: 3.14s; }
-.tagline-sub .pop-char-sub:nth-child(10) { animation-delay: 3.22s; }
-.tagline-sub .pop-char-sub:nth-child(11) { animation-delay: 3.3s; }
-.tagline-sub .pop-char-sub:nth-child(12) { animation-delay: 3.38s; }
-.tagline-sub .pop-char-sub:nth-child(13) { animation-delay: 3.46s; }
-.tagline-sub .pop-char-sub:nth-child(14) { animation-delay: 3.54s; }
-.tagline-sub .pop-char-sub:nth-child(15) { animation-delay: 3.62s; }
-.tagline-sub .pop-char-sub:nth-child(16) { animation-delay: 3.7s; }
-.tagline-sub .pop-char-sub:nth-child(17) { animation-delay: 3.78s; }
-.tagline-sub .pop-char-sub:nth-child(18) { animation-delay: 3.86s; }
-.tagline-sub .pop-char-sub:nth-child(19) { animation-delay: 3.94s; }
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #fff }
+}
 
-@keyframes pop-in {
-    0% {
-        opacity: 0;
-        transform: scale(0.3) translateY(20px) rotate(-10deg);
-    }
-    70% {
-        opacity: 1;
-        transform: scale(1.2) translateY(-5px) rotate(5deg);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) translateY(0) rotate(0);
-    }
+@keyframes fade-in {
+    from { opacity: 0 }
+    to { opacity: 1 }
 }
 
 /* 移动设备上的标语样式调整 */
 @media screen and (max-width: 768px) {
     .tagline-main {
-        font-size: 2.4rem;
+        font-size: 2.6rem;
     }
     
     .tagline-sub {
-        font-size: 1.6rem;
+        font-size: 2.2rem;
     }
 }
 
 /* 大屏幕设备上的标语样式调整 */
 @media screen and (min-width: 1200px) {
     .tagline-main {
-        font-size: 4.2rem;
+        font-size: 4.5rem;
     }
     
     .tagline-sub {
-        font-size: 2.8rem;
+        font-size: 3.6rem;
     }
     
     .typewriter-container {
