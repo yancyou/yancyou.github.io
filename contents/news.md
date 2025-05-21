@@ -1,0 +1,2 @@
+- **January 2025**: Joined the Marler Lab as a machine learning research assistant at UW-Madison
+- **September 2024**: Started a new journey at the University of Wisconsin-Madison

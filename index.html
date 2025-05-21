@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content="Xuan Ouyang's Personal Website" />
+    <meta name="author" content="Xuan Ouyang" />
     <title id="title"></title>
-    <link rel="icon" type="image/x-icon" href="static/assets/Congrui.ico" />
+    <link rel="icon" type="image/jpg" href="static/assets/img/yancy.jpg" />
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Google fonts-->
@@ -29,7 +29,7 @@
     <!-- Navigation-->
     <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
         <div class="container px-5">
-            <a id="page-top-title" class="navbar-brand fw-bold" href="#page-top"></a>
+            <a id="page-top-title" class="navbar-brand fw-bold" href="#page-top">Xuan Ouyang Homepage</a>
             <!-- <a href="#page-top"><img src="static/assets/img/CUMT_LOGO.svg" style="width: 11rem;"></a> -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,13 +39,13 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#page-top">HOME</a>
+                        <a class="nav-link me-lg-3" href="#about">ABOUT</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link me-lg-3" href="#publications">PUBLICATIONS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#project">SIDE PROJECTS</a>
+                        <a class="nav-link me-lg-3" href="#project">PROJECTS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link me-lg-3" href="#awards">AWARDS</a>
@@ -54,26 +54,34 @@
                         <a class="nav-link me-lg-3" href="#service">SERVICE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="https://drive.google.com/file/d/1G3PWfZ_YYm-t4r5OryWBzUeV29CiQJDY/view?usp=sharing">CV</a>
+                        <a class="nav-link me-lg-3" href="#news">NEWS</a>
                     </li>
-
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- 进度条 -->
+    <div class="progress-container">
+        <div class="progress-bar" id="myProgressBar"></div>
+    </div>
+
     <!-- Top Section -->
-    <section class="top-section" style="background-image: url('static/assets/img/MIT.png');">
+    <section class="top-section wisconsin-bg" style="background-image: url('static/assets/img/Wisconsin.jpg');">
         <div class="top-section-content">
-            <div class="container px-1">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <h2 id="top-section-bg-text" class="text-light display-3 lh-1 mb-4 font-alt"></h2>
+            <div class="container px-1 position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h1 id="profile-name" class="text-light display-3 lh-1 mb-3 font-alt fw-bold"></h1>
+                        <p id="profile-position" class="text-light lead mb-3"></p>
+                        <p id="profile-edu" class="text-light mb-3" style="display:none;"></p>
+                        <p id="profile-citations" class="text-light mb-4"></p>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="user-photo photo"><img class="shadow"
-                                src="static/assets/img/photo.jpg"></div>
-                    </div>
+                </div>
+                
+                <!-- 照片放在栅格系统外，使用绝对定位 -->
+                <div class="user-photo photo">
+                    <img class="rounded" src="static/assets/img/photo.jpg">
                 </div>
             </div>
         </div>
@@ -81,53 +89,82 @@
     <!-- Top Section -->
 
 
-    <!-- Home -->
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="home">
+    <!-- About -->
+    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="about">
         <div class="container px-5">
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="about-name-section">
+                        <h2 class="name-title">Xuan Ouyang</h2>
+                        <p class="name-info">Junior B.S. | University of Wisconsin-Madison | Computer Science</p>
+                        <div class="about-social-icons">
+                            <a href="static/assets/docs/Xuan_Ouyang_CV.pdf" class="btn btn-cv btn-sm" target="_blank">
+                                <i class="bi bi-file-earmark-text"></i> CV
+                            </a>
+                            <a href="https://github.com/yancyou" class="btn btn-github btn-sm">
+                                <i class="bi bi-github"></i> GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/jerry-yin-a21314292/" class="btn btn-linkedin btn-sm">
+                                <i class="bi bi-linkedin"></i> LinkedIn
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=7gsdLw4AAAAJ&hl=en#" class="btn btn-scholar btn-sm">
+                                <i class="bi bi-google"></i> Google Scholar
+                            </a>
+                            <a href="https://x.com/OuYoungXuan" class="btn btn-x btn-sm">
+                                <i class="bi bi-twitter-x"></i> X
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-divider"></div>
             <header>
-                <h2 id="home-subtitle"> </h2>
-                <!-- <span class="bi bi-list"></span> -->
+                <h2 id="about-subtitle" class="section-header"><i class="bi bi-person-fill"></i>&nbsp;About Me</h2>
             </header>
-            <div class="main-body" id="home-md"></div>
-
-
+            <div class="section-content" id="about-content">
+                <div class="main-body" id="about-md"></div>
+            </div>
         </div>
     </section>
-    <!-- Home -->
+    <!-- About -->
 
     <!-- Publications -->
     <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="publications">
         <div class="container px-5">
             <header>
-                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;PUBLICATIONS</h2>
+                <h2 id="publications-subtitle" class="section-header"><i class="bi bi-file-text-fill"></i>&nbsp;PUBLICATIONS</h2>
             </header>
-            <div class="main-body" id="publications-md"></div>
-
+            <div class="section-content" id="publications-content">
+                <div class="publications-container">
+                    <div class="main-body" id="publications-md"></div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Publications  -->
 
-    <!-- Side Project -->
+    <!-- Projects -->
     <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="project">
         <div class="container px-5">
             <header>
-                <!-- <h2 id="achievements-subtitle"><i class="bi bi-trophy-fill"></i>&nbsp;ACHIEVEMENTS</h2> -->
-                <h2 id="achievements-subtitle"><i class="bi bi-code-slash"></i>&nbsp; SIDE PROJECTS</h2>
+                <h2 id="project-subtitle" class="section-header"><i class="bi bi-code-slash"></i>&nbsp;PROJECTS</h2>
             </header>
-            <div class="main-body" id="project-md">
+            <div class="section-content" id="project-content">
+                <div class="main-body" id="project-md"></div>
             </div>
         </div>
     </section>
-    <!-- Side Project -->
+    <!-- Projects -->
 
     <!-- Awards -->
     <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="awards">
         <div class="container px-5">
             <header>
-                <h2 id="awards-subtitle"><i class="bi bi-award-fill"></i>&nbsp;AWARDS </h2>
+                <h2 id="awards-subtitle" class="section-header"><i class="bi bi-award-fill"></i>&nbsp;AWARDS</h2>
             </header>
+            <div class="section-content" id="awards-content">
             <div class="main-body" id="awards-md"></div>
-
+            </div>
         </div>
     </section>
     <!-- Awards -->
@@ -136,21 +173,34 @@
     <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="service">
         <div class="container px-5">
             <header>
-                <h2 id="awards-subtitle"><i class="bi bi-chat-left-text"></i>&nbsp;SERVICE </h2>
+                <h2 id="service-subtitle" class="section-header"><i class="bi bi-chat-left-text"></i>&nbsp;SERVICE</h2>
             </header>
+            <div class="section-content" id="service-content">
             <div class="main-body" id="service-md"></div>
+            </div>
         </div>
     </section>
     <!-- Service -->
 
-
+    <!-- News -->
+    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="news">
+        <div class="container px-5">
+            <header>
+                <h2 id="news-subtitle" class="section-header"><i class="bi bi-newspaper"></i>&nbsp;NEWS</h2>
+            </header>
+            <div class="section-content" id="news-content">
+                <div class="main-body" id="news-md"></div>
+            </div>
+        </div>
+    </section>
+    <!-- News -->
 
     <!-- Footer-->
     <footer class="bg-bottom text-center py-5">
         <div class="container px-5">
             <div class="text-white-50 small">
                 <div id="copyright-text" class="mb-2"></div>
-                <a id="github-link" href="https://github.com/JerryYin777">Github</a>
+                <a id="github-link" href="https://github.com/JerryYin777/JerryYin777.github.io">Github</a>
                 <span class="mx-1">&middot;</span>
                 <a id="license-link" href="https://github.com/JerryYin777/JerryYin777.github.io/blob/master/LICENSE">License</a>
             </div>
@@ -171,6 +221,50 @@
     <script type="text/javascript" src="static/js/scripts.js"></script>
     <script type="text/javascript" src="static/js/js-yaml.min.js"></script>
 
+    <!-- 进度条脚本 -->
+    <script>
+        // 当网页滚动时，更新进度条
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            // 计算已滚动的百分比
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            
+            // 更新进度条宽度
+            document.getElementById("myProgressBar").style.width = scrolled + "%";
+        }
+    </script>
+    
+    <!-- 折叠功能脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 获取所有的模块标题
+            const sectionHeaders = document.querySelectorAll('.section-header');
+            
+            // 为每个标题添加点击事件
+            sectionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    // 获取当前标题ID的前缀部分
+                    const idPrefix = this.id.split('-')[0];
+                    // 获取对应的内容区域
+                    const contentSection = document.getElementById(idPrefix + '-content');
+                    
+                    if (contentSection) {
+                        // 切换标题和内容的折叠状态
+                        this.classList.toggle('collapsed');
+                        contentSection.classList.toggle('collapsed');
+                        
+                        // 更新进度条（因为页面高度可能变化）
+                        setTimeout(scrollFunction, 500);
+                    } else {
+                        console.error('找不到内容区域: ' + idPrefix + '-content');
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 
