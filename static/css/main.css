@@ -727,14 +727,14 @@ section .main-body{
     overflow: hidden;
     border-right: 4px solid transparent;
     width: 0;
-    animation: typing-main 3s steps(20, end) forwards,
-               blink-caret 0.75s step-end infinite;
+    animation: typing-main 3.5s steps(20, end) forwards,
+               blink-caret 0.75s step-end 5;
     animation-delay: 0.5s;
 }
 
 .tagline-sub {
     color: #ffffff;
-    font-size: 3.0rem; /* 放大第二行字体 */
+    font-size: 3.5rem; /* 放大第二行字体 */
     font-weight: 600;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     letter-spacing: -0.01em; /* 负值使字母更紧凑 */
@@ -743,10 +743,10 @@ section .main-body{
     border-right: 4px solid #fff;
     width: 0;
     opacity: 0;
-    animation: typing-sub 2s steps(16, end) forwards,
-               blink-caret 0.75s step-end infinite 3.5s,
-               fade-in 0.1s ease 3.5s forwards;
-    animation-delay: 3.5s;
+    animation: typing-sub 2.5s steps(16, end) forwards,
+               blink-caret 0.75s step-end 4,
+               fade-in 0.1s ease forwards;
+    animation-delay: 4.5s;
 }
 
 @keyframes typing-main {
@@ -776,7 +776,7 @@ section .main-body{
     }
     
     .tagline-sub {
-        font-size: 2.2rem;
+        font-size: 2.6rem;
     }
 }
 
@@ -787,7 +787,7 @@ section .main-body{
     }
     
     .tagline-sub {
-        font-size: 3.6rem;
+        font-size: 4.2rem;
     }
     
     .typewriter-container {
