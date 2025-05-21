@@ -7,26 +7,26 @@ My current passion revolves around building AI systems that not only perceive an
 1. **Multimodal LLMs**  
 
     Build scalable transformer architectures that integrate visual, textual, and auditory modalities—leveraging modality-specific encoders and joint training objectives—to enable unified understanding and generation across diverse sensory inputs.
+    
+    **Related Papers**: [<span style="color:#0400ff">A Survey on Multimodal Large Language Models</span>](https://arxiv.org/pdf/2306.13549)
 
 2. **Agent Tool Use**  
 
     Design intelligent agent frameworks where LLMs plan and orchestrate external API calls, database queries, and code execution—incorporating dynamic tool selection, stateful memory, and error-handling—to accomplish complex, multi-step tasks autonomously.
+    
+    **Related Papers**: [<span style="color:#0400ff">Gorilla</span>](https://arxiv.org/pdf/2305.15334) | [<span style="color:#0400ff">ToolRL</span>](https://arxiv.org/pdf/2504.13958)
 
 3. **Multimodal Reasoning**  
 
     Develop cross-modal reasoning frameworks that align and fuse heterogeneous signals—using hierarchical attention, graph-based representations, and consistency objectives—to enable agents to perform robust inference and decision-making across visual, textual, and auditory data streams.
+    
+    **Related Papers**: [<span style="color:#0400ff">Reason-RFT</span>](https://arxiv.org/pdf/2503.20752) | [<span style="color:#0400ff">Video-R1</span>](https://arxiv.org/pdf/2503.21776)
 
 4. **Data-Centric AI**  
 
     Build end-to-end pipelines for curating, validating, and augmenting datasets—measuring coverage, balance, and consistency—to ensure every model component is trained on high-quality, representative examples.
-
-#### Misc
-
-* Before transferring to the [<span style="color:#0400ff">University of Minnesota</span>](https://twin-cities.umn.edu/), I studied at Nanchang University, majoring in Artificial Intelligence in a top-tier class with a School Academic Special Scholarship. I was the leader of Nanchang University Supercomputer Cluster Team ([<span style="color:#0400ff">NCUSCC</span>](https://ncuscc.github.io/)) Leader, with experience of ASC22 and SC23(IndySCC). 
-
-* I am passionate about open source and firmly believe in its potential to disseminate knowledge widely, leverage technology to lead innovation to the world and contribute to the advancement of human society. I am proud to have garnered over **4k stars** and acquired over **370 followers** on [<span style="color:#0400ff">GitHub</span>](https://github.com/yancyou). I occasionally share my explorations in the machine learning system and LLM field on [<span style="color:#0400ff">知乎</span>](https://www.zhihu.com/people/ycr222/posts) in Mandarin and [<span style="color:#0400ff">X</span>](https://x.com/OuYoungXuan) in English.
-
-* I love league of legends and valorant games!
+    
+    **Related Papers**: [<span style="color:#0400ff">RDED</span>](https://arxiv.org/pdf/2312.03526) | [<span style="color:#0400ff">NCFM</span>](https://arxiv.org/pdf/2502.20653)
 
 #### Contact<p id="contact-info"></p>
 

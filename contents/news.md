@@ -1,2 +1,3 @@
-- **January 2025**: Joined the Marler Lab as a machine learning research assistant at UW-Madison
+- **May 2025**: I'm happy to be selected as REU team members in UW-Madison
+- **January 2025**: I Joined the Marler Lab as a machine learning research assistant at UW-Madison
 - **September 2024**: Started a new journey at the University of Wisconsin-Madison
