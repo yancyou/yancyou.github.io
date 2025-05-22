@@ -87,10 +87,11 @@
 .top-section {
     position: relative;
     padding: 10rem 0;
-    background-position: center 25% !important; /* 调整背景图片垂直位置 */
+    background-position: center center !important; /* 改回居中显示 */
     background-size: cover !important;
-    height: 35rem;
-    overflow: hidden; /* 防止背景溢出 */
+    height: 45rem !important; /* 增加高度确保全屏显示完整 */
+    overflow: visible !important; /* 修改为visible确保内容不被截断 */
+    background-attachment: scroll !important; /* 与wisconsin-bg保持一致 */
 }
 
 .top-section h1 {
@@ -124,10 +125,12 @@
 /* Wisconsin背景专用样式 */
 .wisconsin-bg {
     filter: brightness(1.1) contrast(1.05);
-    background-size: cover !important; /* 确保图片完全覆盖 */
-    background-position: center 25% !important; /* 调整背景图片垂直位置 */
+    background-size: 120% auto !important; /* 将cover改为120% auto，使图片更宽 */
+    background-position: center center !important; /* 保持居中显示 */
     background-repeat: no-repeat !important; /* 防止图片重复 */
-    background-attachment: fixed !important; /* 在滚动时保持背景图片固定 */
+    background-attachment: scroll !important; /* 改为scroll，允许背景随内容滚动 */
+    width: 100% !important; /* 确保宽度为100% */
+    height: 100% !important; /* 确保高度为100% */
 }
 
 /* 为wisconsin-bg添加暗色遮罩，确保文字清晰可读 */
@@ -328,10 +331,14 @@ section .main-body{
 .photo {
     position: absolute;
     right: 5%;
-    top: 26rem;
-    z-index: 100 !important; /* 大幅提高z-index确保照片在最上层 */
+    top: 36rem;
+    z-index: 1000 !important; /* 提高z-index值 */
     transition: all 0.3s ease;
-    pointer-events: none; /* 防止照片阻止点击下方元素 */
+    display: block !important; /* 确保照片显示 */
+    opacity: 1 !important; /* 确保照片可见 */
+    visibility: visible !important; /* 确保照片可见 */
+    pointer-events: auto; /* 恢复指针事件，允许交互 */
+    transform: translateZ(0); /* 强制硬件加速，解决可能的渲染问题 */
 }
 
 .photo img {
@@ -340,7 +347,10 @@ section .main-body{
     border-radius: 50%;
     box-shadow: 0 8px 25px rgba(0,0,0,0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    pointer-events: auto; /* 确保照片本身可以被点击 */
+    display: block !important; /* 确保图片显示 */
+    opacity: 1 !important; /* 确保图片可见 */
+    visibility: visible !important; /* 确保图片可见 */
+    max-width: none !important; /* 移除最大宽度限制 */
 }
 
 .photo img:hover {
@@ -366,7 +376,8 @@ section .main-body{
         top: 26rem; /* 与桌面端保持一致 */
         text-align: center;
         margin: 0;
-        transform: scale(0.9); /* 稍微缩小以适应小屏幕 */
+        transform: scale(0.9) translateZ(0); /* 稍微缩小以适应小屏幕 */
+        z-index: 1000 !important; /* 保持高z-index */
     }
 
     .photo img {
@@ -375,8 +386,8 @@ section .main-body{
     }
 
     .top-section {
-        height: 40rem; /* 保持足够高度 */
-        overflow: visible; /* 确保内容不被截断 */
+        height: 45rem !important; /* 保持足够高度 */
+        overflow: visible !important; /* 确保内容不被截断 */
     }
     
     /* 确保About部分在移动端的显示 */
@@ -414,7 +425,7 @@ section .main-body{
     }
 
     .top-section {
-        height: 45rem; /* 增加高度以适应内容 */
+        height: 45rem !important; /* 增加高度以适应内容 */
         overflow: visible;
     }
     
@@ -453,7 +464,8 @@ section .main-body{
         position: absolute;
         right: 5%;
         top: 24rem; /* 略微上移 */
-        transform: scale(0.7); /* 更小屏幕更小比例 */
+        transform: scale(0.7) translateZ(0); /* 更小屏幕更小比例 */
+        z-index: 1000 !important; /* 保持高z-index */
     }
     
     .tagline-main {
@@ -492,6 +504,11 @@ section .main-body{
         padding: 0.3rem 0.6rem;
         font-size: 0.85rem;
     }
+    
+    .top-section {
+        height: 45rem !important; /* 确保高度一致 */
+        overflow: visible !important;
+    }
 }
 
 /* 添加最小屏幕尺寸优化 */
@@ -500,7 +517,8 @@ section .main-body{
         position: absolute;
         right: 5%;
         top: 22rem;
-        transform: scale(0.6);
+        transform: scale(0.6) translateZ(0);
+        z-index: 1000 !important;
     }
     
     .tagline-container {
@@ -512,7 +530,8 @@ section .main-body{
     }
     
     .top-section {
-        height: 40rem;
+        height: 45rem !important; /* 保持一致的高度 */
+        overflow: visible !important;
     }
     
     .about-social-icons {
@@ -573,11 +592,13 @@ section .main-body{
         position: absolute;
         right: 5%;
         top: 18rem;
-        transform: scale(0.6);
+        transform: scale(0.6) translateZ(0);
+        z-index: 1000 !important;
     }
     
     .top-section {
-        height: 38rem;
+        height: 45rem !important; /* 保持一致的高度 */
+        overflow: visible !important;
     }
 }
 
@@ -815,10 +836,12 @@ section .main-body{
 #publications-md {
     max-height: 70vh !important; /* 使用!important强制应用 */
     height: 70vh !important; /* 固定高度 */
-    overflow-y: scroll !important; /* 强制显示滚动条 */
-    padding-right: 15px; /* 为滚动条留出空间 */
-    padding-bottom: 20px; /* 底部留出空间 */
-    display: block; /* 确保元素正确显示 */
+    overflow-y: auto !important; /* 强制显示滚动条 */
+    padding-right: 15px !important; /* 为滚动条留出空间 */
+    padding-bottom: 20px !important; /* 底部留出空间 */
+    display: block !important; /* 确保元素正确显示 */
+    position: relative !important; /* 确保定位正确 */
+    z-index: 10 !important; /* 确保内容在前面 */
 }
 
 /* 美化滚动条样式 */
@@ -845,6 +868,16 @@ section .main-body{
 #publications-md {
     scrollbar-width: thin !important;
     scrollbar-color: #4e54c8 #f1f1f1 !important;
+}
+
+/* 确保在移动设备上也能正常滚动 */
+@media (max-width: 768px) {
+    #publications-md {
+        max-height: none !important; /* 移动端不限制高度 */
+        height: auto !important; /* 移动端高度自适应 */
+        overflow-y: visible !important; /* 移动端不使用滚动条 */
+        padding-right: 0 !important; /* 移除滚动条空间 */
+    }
 }
 
 /* 添加滚动阴影提示 */
@@ -1325,7 +1358,9 @@ a {
 @supports (-webkit-touch-callout: none) {
     /* iOS Safari特定修复 */
     .top-section {
-        background-attachment: scroll;
+        background-attachment: scroll !important;
+        height: 45rem !important;
+        overflow: visible !important;
     }
     
     /* 修复iOS Safari上的固定元素问题 */
@@ -1338,7 +1373,10 @@ a {
     .photo {
         -webkit-transform: translateZ(0) scale(1);
         transform: translateZ(0) scale(1);
-        z-index: 10;
+        z-index: 1000 !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     @media screen and (max-width: 991px) {
