@@ -2,8 +2,23 @@ const content_dir = 'contents/'
 const config_file = 'config.yml'
 const section_names = ['about', 'publications', 'awards', 'project', 'service', 'news']
 
+// Title override function to ensure correct title display
+function ensureCorrectTitle() {
+    // Force title to be "Xuan Ouyang Homepage"
+    if (document.title !== "Xuan Ouyang Homepage") {
+        document.title = "Xuan Ouyang Homepage";
+    }
+}
+
+// Call immediately
+ensureCorrectTitle();
 
 window.addEventListener('DOMContentLoaded', event => {
+    // Explicitly set the document title
+    document.title = "Xuan Ouyang Homepage";
+
+    // Set an interval to keep checking the title
+    setInterval(ensureCorrectTitle, 500);
 
     // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
