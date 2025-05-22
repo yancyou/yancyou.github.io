@@ -276,15 +276,35 @@ section .main-body{
         top: auto;
         text-align: center;
         margin: 0 auto;
+        margin-top: -50px; /* 调整上边距，避免照片位置过低 */
     }
 
     .photo img {
         height: 14rem;
         margin-top: 3rem;
+        max-width: 90%; /* 确保照片不会超出屏幕 */
     }
 
     .top-section {
-        height: 36rem;
+        height: 40rem; /* 增加高度，给照片和标语留出足够空间 */
+    }
+    
+    /* 修复About部分在移动端的显示 */
+    .about-name-section {
+        width: 100%;
+        padding-right: 0;
+        margin: 0 auto;
+    }
+    
+    /* 确保社交图标在移动端正确显示 */
+    .about-social-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .about-social-icons .btn {
+        margin: 0.3rem;
     }
 }
 
@@ -295,19 +315,89 @@ section .main-body{
         top: auto;
         text-align: center;
         margin: 0 auto;
+        margin-top: -30px; /* 调整上边距 */
     }
 
     .photo img {
         height: 10rem;
-        margin-top: 5rem;
+        margin-top: 3rem;
+        max-width: 80%; /* 确保照片不会超出屏幕 */
     }
 
     .top-section {
-        height: 42rem;
+        height: 45rem; /* 增加高度 */
     }
     
     .social-icons .btn {
         margin-bottom: 0.5rem;
+    }
+    
+    /* 调整标语位置，使其在移动端更合理 */
+    .tagline-container {
+        top: 100px;
+    }
+    
+    /* 确保打字效果文本在移动端不会溢出 */
+    .tagline-main, .tagline-sub {
+        max-width: 95vw; /* 限制最大宽度为视口宽度的95% */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* 确保section内容在移动端有合适的内边距 */
+    .container.px-5 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    /* 导航栏在移动端的优化 */
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+}
+
+/* 添加小屏幕手机的额外优化 */
+@media screen and (max-width: 480px) {
+    .photo img {
+        height: 8rem;
+        margin-top: 2rem;
+    }
+    
+    .tagline-main {
+        font-size: 2rem !important;
+    }
+    
+    .tagline-sub {
+        font-size: 2rem !important;
+    }
+    
+    .name-title {
+        font-size: 3rem;
+    }
+    
+    .name-info {
+        font-size: 1rem;
+    }
+    
+    /* 调整所有内容部分的字体大小 */
+    section .main-body {
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+    }
+    
+    /* 确保publications项目在移动设备上正确显示 */
+    .publication-item {
+        padding: 0.8rem;
+    }
+    
+    .publication-title h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* 修复社交按钮在特小屏幕上的显示 */
+    .about-social-icons .btn {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.85rem;
     }
 }
 
@@ -807,6 +897,138 @@ section .main-body{
     
     .typewriter-container {
         margin-top: 30px;
+    }
+}
+
+/* 改进导航栏在移动端的显示 */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: rgba(255, 255, 255, 0.98);
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        margin-top: 0.5rem;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    /* 修复进度条在移动端的位置 */
+    .progress-container {
+        top: 60px;
+    }
+}
+
+/* 修改媒体查询和打字动画样式，使其在移动端更好展示 */
+@media screen and (max-width: 768px) {
+    /* 移动端打字动画调整 */
+    @keyframes typing-main {
+        from { width: 0 }
+        to { width: 100% }
+    }
+    
+    @keyframes typing-sub {
+        from { width: 0 }
+        to { 
+            width: 100%;
+            border-right-color: transparent;
+            border-right-width: 0;
+            font-size: 2.6rem !important; /* 移动端大小 */
+        }
+    }
+    
+    /* 确保typewriter容器在移动端正确对齐 */
+    .typewriter-container {
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    .typewriter-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* 确保社交图标按钮在移动端有合适的大小和间距 */
+@media (max-width: 576px) {
+    .about-social-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .about-social-icons .btn {
+        margin: 0.2rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    /* 调整折叠项目头部样式 */
+    .section-header {
+        font-size: 1.8rem;
+        padding-right: 25px;
+    }
+}
+
+/* 优化Publications部分在移动端的显示 */
+@media (max-width: 768px) {
+    .publication-item {
+        padding: 1rem;
+    }
+    
+    .publication-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .publication-title h3 {
+        margin-bottom: 0.5rem;
+    }
+    
+    .publication-meta {
+        font-size: 0.9rem;
+    }
+    
+    .publication-abstract {
+        padding: 0.8rem;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    
+    .publication-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .publication-links a {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+        padding: 0.3rem 0.8rem;
+        min-width: 0;
+        font-size: 0.8rem;
+    }
+    
+    /* 优化内容部分的滚动区域 */
+    #publications-md {
+        max-height: none; /* 移动端不限制高度 */
+    }
+}
+
+/* 修复网页在不同设备上的整体布局 */
+html, body {
+    overflow-x: hidden; /* 防止水平滚动 */
+    width: 100%;
+    max-width: 100%;
+}
+
+/* 确保container在所有设备上都有适当的边距 */
+@media (max-width: 576px) {
+    .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
     }
 }
 
