@@ -123,6 +123,8 @@
 /* Wisconsin背景专用样式 */
 .wisconsin-bg {
     filter: brightness(1.1) contrast(1.05);
+    background-size: cover; /* 确保图片完全覆盖 */
+    background-position: center center; /* 居中显示 */
 }
 
 .wisconsin-bg::before {
@@ -803,7 +805,7 @@ section .main-body{
 
 /* Publication container scrollbar */
 #publications-md {
-    max-height: none; /* 移动端不限制高度 */
+    max-height: 70vh; /* 恢复固定高度设置，为视口高度的70% */
     overflow-y: auto; /* 添加垂直滚动条 */
     padding-right: 15px; /* 为滚动条留出空间 */
     padding-bottom: 20px; /* 底部留出空间 */
@@ -812,6 +814,7 @@ section .main-body{
 /* 美化滚动条样式 */
 #publications-md::-webkit-scrollbar {
     width: 8px;
+    display: block; /* 确保滚动条显示 */
 }
 
 #publications-md::-webkit-scrollbar-track {
