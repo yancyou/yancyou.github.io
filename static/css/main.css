@@ -91,7 +91,7 @@
     background-size: cover !important;
     height: 45rem !important; /* 增加高度确保全屏显示完整 */
     overflow: visible !important; /* 修改为visible确保内容不被截断 */
-    background-attachment: scroll !important; /* 与wisconsin-bg保持一致 */
+    background-attachment: fixed !important; /* 改为fixed使背景图片固定 */
 }
 
 .top-section h1 {
@@ -128,7 +128,7 @@
     background-size: 120% auto !important; /* 将cover改为120% auto，使图片更宽 */
     background-position: center center !important; /* 保持居中显示 */
     background-repeat: no-repeat !important; /* 防止图片重复 */
-    background-attachment: scroll !important; /* 改为scroll，允许背景随内容滚动 */
+    background-attachment: fixed !important; /* 改为fixed，背景图片固定不随滚动 */
     width: 100% !important; /* 确保宽度为100% */
     height: 100% !important; /* 确保高度为100% */
 }
@@ -329,10 +329,10 @@ section .main-body{
 }
 
 .photo {
-    position: absolute;
+    position: fixed !important; /* 改为固定定位 */
     right: 5%;
-    top: 36rem;
-    z-index: 1000 !important; /* 提高z-index值 */
+    top: 25% !important;
+    z-index: 9999 !important; /* 提高z-index值 */
     transition: all 0.3s ease;
     display: block !important; /* 确保照片显示 */
     opacity: 1 !important; /* 确保照片可见 */
@@ -371,178 +371,67 @@ section .main-body{
 
 @media screen and (max-width: 991px) {
     .photo {
-        position: fixed !important; /* 改为固定定位 */
-        right: 5%; /* 与桌面端保持一致 */
-        top: 17rem !important; /* 调整垂直位置更上一些 */
+        position: fixed !important; /* 固定定位 */
+        right: 5% !important;
+        top: 25% !important;
         text-align: center;
         margin: 0;
-        transform: scale(0.8) translateZ(0) !important; /* 稍微缩小以适应小屏幕 */
-        z-index: 1000 !important; /* 保持高z-index */
-    }
-
-    .photo img {
-        height: 13rem !important;
-        max-width: none !important; /* 移除最大宽度限制 */
+        transform: scale(0.8) translateZ(0) !important;
+        z-index: 9999 !important;
     }
 
     .top-section {
-        height: 45rem !important; /* 保持足够高度 */
-        overflow: visible !important; /* 确保内容不被截断 */
-    }
-    
-    /* 确保About部分在移动端的显示 */
-    .about-name-section {
-        width: 100%;
-        padding-right: 0;
-        margin: 0 auto;
-        text-align: center;
-    }
-    
-    /* 社交图标在移动端保持一致布局 */
-    .about-social-icons {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 1rem auto;
-    }
-    
-    .about-social-icons .btn {
-        margin: 0.3rem;
+        height: 45rem !important;
+        overflow: visible !important;
+        background-attachment: fixed !important;
     }
 }
 
 @media screen and (max-width: 736px) {
     .photo {
-        position: fixed !important; /* 改为固定定位 */
-        right: 5%; /* 与桌面端保持一致 */
-        top: 17rem !important; /* 调整垂直位置 */
-        transform: scale(0.75) translateZ(0) !important; /* 更小屏幕进一步缩小 */
-        z-index: 1000 !important;
-    }
-
-    .photo img {
-        height: 12rem !important;
-        margin: 0;
+        position: fixed !important;
+        right: 5% !important;
+        top: 25% !important;
+        transform: scale(0.75) translateZ(0) !important;
+        z-index: 9999 !important;
     }
 
     .top-section {
-        height: 45rem !important; /* 增加高度以适应内容 */
-        overflow: visible;
-    }
-    
-    .social-icons .btn {
-        margin-bottom: 0.5rem;
-    }
-    
-    /* 调整标语位置，使其在移动端更合理 */
-    .tagline-container {
-        top: 100px;
-        width: 90%;
-        left: 5%;
-        right: 5%;
-    }
-    
-    /* 确保打字效果文本在移动端不会溢出 */
-    .tagline-main, .tagline-sub {
-        max-width: 100%; /* 使用100%而不是95vw */
-    }
-    
-    /* 确保section内容在移动端有合适的内边距 */
-    .container.px-5 {
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-    }
-    
-    /* 导航栏在移动端的优化 */
-    .navbar-brand {
-        font-size: 1.1rem;
+        height: 45rem !important;
+        overflow: visible !important;
+        background-attachment: fixed !important;
     }
 }
 
-/* 添加小屏幕手机的额外优化 */
 @media screen and (max-width: 480px) {
     .photo {
-        position: fixed !important; /* 改为固定定位 */
-        right: 5%;
-        top: 16rem !important; /* 略微上移 */
-        transform: scale(0.65) translateZ(0) !important; /* 更小屏幕更小比例 */
-        z-index: 1000 !important; /* 保持高z-index */
-    }
-    
-    .tagline-main {
-        font-size: 2rem !important;
-    }
-    
-    .tagline-sub {
-        font-size: 2rem !important;
-    }
-    
-    .name-title {
-        font-size: 3rem;
-    }
-    
-    .name-info {
-        font-size: 1rem;
-    }
-    
-    /* 调整所有内容部分的字体大小 */
-    section .main-body {
-        font-size: 1.1rem;
-        line-height: 1.8rem;
-    }
-    
-    /* 确保publications项目在移动设备上正确显示 */
-    .publication-item {
-        padding: 0.8rem;
-    }
-    
-    .publication-title h3 {
-        font-size: 1.1rem;
-    }
-    
-    /* 修复社交按钮在特小屏幕上的显示 */
-    .about-social-icons .btn {
-        padding: 0.3rem 0.6rem;
-        font-size: 0.85rem;
+        position: fixed !important;
+        right: 5% !important;
+        top: 25% !important;
+        transform: scale(0.65) translateZ(0) !important;
+        z-index: 9999 !important;
     }
     
     .top-section {
-        height: 45rem !important; /* 确保高度一致 */
+        height: 45rem !important;
         overflow: visible !important;
+        background-attachment: fixed !important;
     }
 }
 
-/* 添加最小屏幕尺寸优化 */
 @media screen and (max-width: 375px) {
     .photo {
-        position: fixed !important; /* 改为固定定位 */
-        right: 5%;
-        top: 15rem !important;
+        position: fixed !important;
+        right: 5% !important;
+        top: 25% !important;
         transform: scale(0.55) translateZ(0) !important;
-        z-index: 1000 !important;
-    }
-    
-    .tagline-container {
-        top: 80px;
-    }
-    
-    .tagline-main, .tagline-sub {
-        font-size: 1.7rem !important;
+        z-index: 9999 !important;
     }
     
     .top-section {
-        height: 45rem !important; /* 保持一致的高度 */
+        height: 45rem !important;
         overflow: visible !important;
-    }
-    
-    .about-social-icons {
-        padding: 0;
-    }
-    
-    .about-social-icons .btn {
-        padding: 0.25rem 0.5rem;
-        font-size: 0.8rem;
-        margin: 0.2rem;
+        background-attachment: fixed !important;
     }
 }
 
@@ -829,8 +718,8 @@ section .main-body{
     position: relative;
     margin: 0 -5px; /* 抵消container的padding */
     padding: 0 5px;
-    max-height: 70vh; /* 限制整个容器高度 */
-    overflow: visible; /* 允许超出部分可见 */
+    max-height: 70vh !important; /* 限制整个容器高度 */
+    overflow: visible !important; /* 允许超出部分可见 */
 }
 
 /* Publication container scrollbar */
@@ -871,13 +760,14 @@ section .main-body{
     scrollbar-color: #4e54c8 #f1f1f1 !important;
 }
 
-/* 确保在移动设备上也能正常滚动 */
+/* 确保在移动设备上也能正常滚动 - 保持滚动设置不变 */
 @media (max-width: 768px) {
     #publications-md {
         max-height: 70vh !important; /* 保持固定高度 */
         height: 70vh !important; /* 保持固定高度 */
         overflow-y: scroll !important; /* 强制显示滚动条 */
         padding-right: 10px !important; /* 为滚动条留出空间 */
+        -webkit-overflow-scrolling: touch !important; /* 平滑滚动 */
     }
 
     .publications-container {
