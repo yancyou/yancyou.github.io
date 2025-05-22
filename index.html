@@ -20,8 +20,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap"
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
-    <link type="text/css" href="static/css/main.css" rel="stylesheet" />
+    <link type="text/css" href="static/css/styles.css?v=1.1" rel="stylesheet" />
+    <link type="text/css" href="static/css/main.css?v=1.1" rel="stylesheet" />
 
 </head>
 
@@ -273,6 +273,32 @@
                     }
                 });
             });
+            
+            // 确保打字动画完成后字体大小正确
+            const taglineSub = document.querySelector('.tagline-sub');
+            const taglineMain = document.querySelector('.tagline-main');
+            if (taglineSub && taglineMain) {
+                // 监听动画结束事件
+                taglineSub.addEventListener('animationend', function(e) {
+                    if (e.animationName === 'typing-sub') {
+                        // 动画结束后强制应用与tagline-main相同的字体大小
+                        setTimeout(function() {
+                            const mainStyle = window.getComputedStyle(taglineMain);
+                            taglineSub.style.fontSize = mainStyle.fontSize;
+                            // 确保光标完全消失
+                            taglineSub.style.borderRight = 'none';
+                        }, 100);
+                    }
+                });
+                
+                // 为了保险起见，延迟8秒后也应用一次字体大小
+                setTimeout(function() {
+                    const mainStyle = window.getComputedStyle(taglineMain);
+                    taglineSub.style.fontSize = mainStyle.fontSize;
+                    // 确保光标完全消失
+                    taglineSub.style.borderRight = 'none';
+                }, 8000);
+            }
         });
     </script>
 
