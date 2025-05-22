@@ -10,6 +10,19 @@
     <!-- Immediately set document title -->
     <script>
         document.title = "Xuan Ouyang Homepage";
+        
+        // 定时检查并确保标题正确
+        function checkAndFixTitle() {
+            if (document.title !== "Xuan Ouyang Homepage") {
+                document.title = "Xuan Ouyang Homepage";
+            }
+        }
+        
+        // 页面加载后立即检查
+        window.addEventListener('load', checkAndFixTitle);
+        
+        // 定期检查标题
+        setInterval(checkAndFixTitle, 1000);
     </script>
     <link rel="icon" type="image/x-icon" href="static/assets/img/yancy.ico" />
     <!-- 添加Open Graph和Twitter Card元标签，优化社交媒体分享效果 -->
