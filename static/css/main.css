@@ -87,9 +87,10 @@
 .top-section {
     position: relative;
     padding: 10rem 0;
-    background-position: center;
-    background-size: cover;
+    background-position: center center;
+    background-size: cover !important;
     height: 35rem;
+    overflow: hidden; /* 防止背景溢出 */
 }
 
 .top-section h1 {
@@ -123,10 +124,12 @@
 /* Wisconsin背景专用样式 */
 .wisconsin-bg {
     filter: brightness(1.1) contrast(1.05);
-    background-size: cover; /* 确保图片完全覆盖 */
-    background-position: center center; /* 居中显示 */
+    background-size: cover !important; /* 确保图片完全覆盖 */
+    background-position: center center !important; /* 居中显示 */
+    background-repeat: no-repeat !important; /* 防止图片重复 */
 }
 
+/* 为wisconsin-bg添加暗色遮罩，确保文字清晰可读 */
 .wisconsin-bg::before {
     content: "";
     position: absolute;
@@ -801,40 +804,44 @@ section .main-body{
     position: relative;
     margin: 0 -5px; /* 抵消container的padding */
     padding: 0 5px;
+    max-height: 70vh; /* 限制整个容器高度 */
+    overflow: visible; /* 允许超出部分可见 */
 }
 
 /* Publication container scrollbar */
 #publications-md {
-    max-height: 70vh; /* 恢复固定高度设置，为视口高度的70% */
-    overflow-y: auto; /* 添加垂直滚动条 */
+    max-height: 70vh !important; /* 使用!important强制应用 */
+    height: 70vh !important; /* 固定高度 */
+    overflow-y: scroll !important; /* 强制显示滚动条 */
     padding-right: 15px; /* 为滚动条留出空间 */
     padding-bottom: 20px; /* 底部留出空间 */
+    display: block; /* 确保元素正确显示 */
 }
 
 /* 美化滚动条样式 */
 #publications-md::-webkit-scrollbar {
-    width: 8px;
-    display: block; /* 确保滚动条显示 */
+    width: 8px !important;
+    display: block !important; /* 确保滚动条显示 */
 }
 
 #publications-md::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
+    background: #f1f1f1 !important;
+    border-radius: 10px !important;
 }
 
 #publications-md::-webkit-scrollbar-thumb {
-    background: #4e54c8;
-    border-radius: 10px;
+    background: #4e54c8 !important;
+    border-radius: 10px !important;
 }
 
 #publications-md::-webkit-scrollbar-thumb:hover {
-    background: #3a3f9e;
+    background: #3a3f9e !important;
 }
 
 /* Firefox滚动条样式 */
 #publications-md {
-    scrollbar-width: thin;
-    scrollbar-color: #4e54c8 #f1f1f1;
+    scrollbar-width: thin !important;
+    scrollbar-color: #4e54c8 #f1f1f1 !important;
 }
 
 /* 添加滚动阴影提示 */
@@ -1267,7 +1274,9 @@ a {
     
     /* 优化内容部分的滚动区域 */
     #publications-md {
-        max-height: none; /* 移动端不限制高度 */
+        max-height: none !important; /* 移动端不限制高度 */
+        height: auto !important; /* 移动端高度自适应 */
+        overflow-y: visible !important; /* 移动端不使用滚动条 */
     }
 }
 
