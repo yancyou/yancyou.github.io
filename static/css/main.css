@@ -828,15 +828,15 @@ section .main-body{
     position: relative;
     margin: 0 -5px; /* 抵消container的padding */
     padding: 0 5px;
-    max-height: 70vh; /* 限制整个容器高度 */
+    max-height: 70vh; /* 限制整个容器高度 - 仅桌面端 */
     overflow: visible; /* 允许超出部分可见 */
 }
 
 /* Publication container scrollbar */
 #publications-md {
-    max-height: 70vh !important; /* 使用!important强制应用 */
-    height: 70vh !important; /* 固定高度 */
-    overflow-y: auto !important; /* 强制显示滚动条 */
+    max-height: 70vh !important; /* 使用!important强制应用 - 仅桌面端 */
+    height: 70vh !important; /* 固定高度 - 仅桌面端 */
+    overflow-y: auto !important; /* 强制显示滚动条 - 仅桌面端 */
     padding-right: 15px !important; /* 为滚动条留出空间 */
     padding-bottom: 20px !important; /* 底部留出空间 */
     display: block !important; /* 确保元素正确显示 */
@@ -872,400 +872,22 @@ section .main-body{
 
 /* 确保在移动设备上也能正常滚动 */
 @media (max-width: 768px) {
+    /* 移除publications容器的高度限制 */
+    .publications-container {
+        max-height: none !important; /* 移动端不限制高度 */
+        overflow: visible !important; /* 确保内容可见 */
+    }
+    
     #publications-md {
         max-height: none !important; /* 移动端不限制高度 */
         height: auto !important; /* 移动端高度自适应 */
         overflow-y: visible !important; /* 移动端不使用滚动条 */
         padding-right: 0 !important; /* 移除滚动条空间 */
     }
-}
-
-/* 添加滚动阴影提示 */
-.publications-container::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 30px;
-    background: linear-gradient(to top, rgba(240, 240, 240, 0.8), transparent);
-    pointer-events: none; /* 确保不会干扰鼠标事件 */
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.publications-container.has-overflow::after {
-    opacity: 1;
-}
-
-/* 增强Awards部分加粗文本的效果 */
-#awards-md strong {
-    font-weight: 900;
-    color: #000000;
-    letter-spacing: 0.01em;
-}
-
-/* About section text and links styling */
-#about-md {
-    font-weight: 500; /* 增加About部分文本的字体粗细 */
-    color: #000000; /* 确保普通文字为纯黑色 */
-}
-
-#about-md a {
-    color: #0400ff; /* 更深的蓝色 */
-    text-decoration: none; /* 默认无下划线 */
-    transition: all 0.3s ease; /* 平滑过渡效果 */
-    font-weight: 500; 
-    border-bottom: 1px solid transparent; /* 透明下边框，悬浮时显示 */
-    padding-bottom: 1px; /* 为下边框留出空间 */
-    position: relative; /* 用于添加动画效果 */
-}
-
-#about-md a:hover {
-    color: #1e45b3; /* 悬停时更深的蓝色 */
-    border-bottom: 1px solid #1e45b3; /* 显示下边框 */
-    transform: translateY(-1px); /* 轻微上移效果 */
-    text-shadow: 0 0 1px rgba(30, 69, 179, 0.2); /* 轻微发光效果 */
-}
-
-#about-md a:visited {
-    color: #4f5cad; /* 访问后的颜色 */
-    text-decoration: none;
-}
-
-#about-md a:visited:hover {
-    color: #3a4588; /* 访问后悬停的颜色 */
-    border-bottom: 1px solid #3a4588;
-    transform: translateY(-1px);
-}
-
-/* 让strong标签的文字也更粗 */
-#about-md strong {
-    font-weight: 700;
-    color: #000000; /* 确保加粗文字也是黑色 */
-}
-
-/* 确保段落文字为黑色 */
-#about-md p, #about-md li, #about-md h4 {
-    color: #000000;
-}
-
-/* 标语样式 */
-.tagline-container {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    top: 170px; /* 修改这个值可以上下移动标语 */
-    z-index: 10;
-}
-
-.tagline {
-    font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #ffffff;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 
-                 0 0 10px rgba(78, 84, 200, 0.8),
-                 0 0 20px rgba(78, 84, 200, 0.5);
-    letter-spacing: 0.05em;
-    padding: 0.5rem 1rem;
-    transform: rotate(-2deg);
-    animation: glow 2s ease-in-out infinite alternate, float 6s ease-in-out infinite;
-    display: inline-block;
-}
-
-@keyframes glow {
-    from {
-        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 
-                     0 0 10px rgba(78, 84, 200, 0.8),
-                     0 0 20px rgba(78, 84, 200, 0.5);
-    }
-    to {
-        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 
-                     0 0 15px rgba(78, 84, 200, 0.9),
-                     0 0 30px rgba(78, 84, 200, 0.7),
-                     0 0 40px rgba(78, 84, 200, 0.5);
-    }
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0px) rotate(-2deg);
-    }
-    50% {
-        transform: translateY(-15px) rotate(-1deg);
-    }
-    100% {
-        transform: translateY(0px) rotate(-2deg);
-    }
-}
-
-/* 移动设备上的标语样式调整 */
-@media screen and (max-width: 768px) {
-    .tagline {
-        font-size: 2rem;
-        padding: 0.3rem 0.5rem;
-    }
     
-    .tagline-container {
-        top: 130px; /* 移动设备上的位置 */
-    }
-}
-
-/* 大屏幕设备上的标语样式调整 */
-@media screen and (min-width: 1200px) {
-    .tagline-container {
-        top: 200px; /* 大屏幕上的位置 */
-    }
-    
-    .tagline {
-        font-size: 6.4rem; /* 大屏幕上的字体大小 */
-    }
-}
-
-/* 打字效果标语样式 */
-.typewriter-container {
-    font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.typewriter-wrapper {
-    position: relative;
-    margin-bottom: 10px;
-}
-
-.tagline-main {
-    color: #ffffff;
-    font-size: 3.8rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 
-                 0 0 10px rgba(78, 84, 200, 0.8),
-                 0 0 20px rgba(78, 84, 200, 0.5);
-    letter-spacing: -0.02em; /* 负值使字母更紧凑 */
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 4px solid transparent;
-    width: 0;
-    animation: typing-main 3.5s steps(20, end) forwards,
-               blink-caret 0.75s step-end 5;
-    animation-delay: 0.5s;
-}
-
-.tagline-sub {
-    color: #ffffff;
-    font-size: 3.8rem !important; /* 与tagline-main相同的字体大小 */
-    font-weight: 700; /* 与tagline-main相同的粗细 */
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 
-                 0 0 10px rgba(78, 84, 200, 0.8),
-                 0 0 20px rgba(78, 84, 200, 0.5);
-    letter-spacing: -0.02em; /* 与tagline-main相同的字母间距 */
-    white-space: nowrap;
-    overflow: hidden; /* 恢复为hidden以实现打字效果 */
-    width: 0; /* 恢复为0以实现打字效果 */
-    opacity: 0; /* 恢复为0以实现打字效果 */
-    border-right: 4px solid #fff; /* 恢复光标效果 */
-    animation: 
-        typing-sub 2.5s steps(16, end) forwards,
-        blink-caret-sub 0.75s step-end 1, /* 减少闪烁次数到1次 */
-        fade-in 0.1s ease forwards;
-    animation-delay: 4.5s;
-}
-
-@keyframes typing-main {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-@keyframes typing-sub {
-    from { 
-        width: 0;
-    }
-    to { 
-        width: 100%;
-        border-right-color: transparent; /* 确保打字完成后光标消失 */
-        border-right-width: 0; /* 完全移除光标边框 */
-        font-size: 3.8rem; /* 确保动画结束后字体大小与tagline-main一致 */
-    }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #fff }
-}
-
-@keyframes blink-caret-sub {
-    from, to { border-color: transparent }
-    50% { border-color: #fff }
-}
-
-@keyframes fade-in {
-    from { opacity: 0 }
-    to { opacity: 1 }
-}
-
-/* 移动设备上的标语样式调整 */
-@media screen and (max-width: 768px) {
-    .tagline-main {
-        font-size: 2.6rem;
-    }
-    
-    .tagline-sub {
-        font-size: 2.6rem !important; /* 与tagline-main相同的字体大小 */
-    }
-}
-
-/* 大屏幕设备上的标语样式调整 */
-@media screen and (min-width: 1200px) {
-    .tagline-main {
-        font-size: 4.5rem;
-    }
-    
-    .tagline-sub {
-        font-size: 4.5rem !important; /* 与tagline-main相同的字体大小 */
-    }
-    
-    .typewriter-container {
-        margin-top: 30px;
-    }
-}
-
-/* 修复网页在不同设备上的整体布局 */
-html, body {
-    overflow-x: hidden; /* 防止水平滚动 */
-    width: 100%;
-    max-width: 100%;
-}
-
-/* 确保container在所有设备上都有适当的边距 */
-@media (max-width: 576px) {
-    .container {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-    }
-}
-
-/* 添加全局链接样式 */
-a {
-    transition: all 0.3s ease;
-}
-
-/* 为主内容区域的所有蓝色链接添加悬浮效果 */
-.main-body a {
-    color: #0400ff;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border-bottom: 1px solid transparent;
-    padding-bottom: 1px;
-}
-
-.main-body a:hover {
-    color: #1e45b3;
-    border-bottom: 1px solid #1e45b3;
-    transform: translateY(-1px);
-    text-shadow: 0 0 1px rgba(30, 69, 179, 0.2);
-}
-
-.main-body a:active {
-    transform: translateY(0); /* 点击时回到原位 */
-}
-
-/* 为Publications部分的链接添加一致的悬浮效果 */
-.publication-links a {
-    display: inline-block;
-    margin-right: 0.8rem;
-    color: #fff;
-    font-size: 0.9rem;
-    text-decoration: none;
-    background-color: #4e54c8;
-    padding: 0.35rem 1.2rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    min-width: 100px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.publication-links a:hover {
-    background-color: #3a3f9e;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    text-decoration: none;
-}
-
-.publication-links a:active {
-    transform: translateY(-1px);
-    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-}
-
-/* 增强导航栏链接的悬浮效果 */
-.nav-link {
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: #4e54c8;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.nav-link:hover::after {
-    width: 70%;
-}
-
-.nav-link:hover {
-    color: #4e54c8 !important;
-    transform: translateY(-2px);
-}
-
-.nav-link.active {
-    color: #4e54c8 !important;
-}
-
-.nav-link.active::after {
-    width: 70%;
-}
-
-/* 修改媒体查询和打字动画样式，使其在移动端更好展示 */
-@media screen and (max-width: 768px) {
-    /* 移动端打字动画调整 */
-    @keyframes typing-main {
-        from { width: 0 }
-        to { width: 100% }
-    }
-    
-    @keyframes typing-sub {
-        from { width: 0 }
-        to { 
-            width: 100%;
-            border-right-color: transparent;
-            border-right-width: 0;
-            font-size: 2.6rem !important; /* 移动端大小 */
-        }
-    }
-    
-    /* 确保typewriter容器在移动端正确对齐 */
-    .typewriter-container {
-        width: 95%;
-        margin: 0 auto;
-    }
-    
-    .typewriter-wrapper {
-        width: 100%;
-        display: flex;
-        justify-content: center;
+    /* 移除滚动阴影提示 */
+    .publications-container::after {
+        display: none !important;
     }
 }
 
@@ -1313,6 +935,7 @@ a {
         max-height: none !important; /* 移动端不限制高度 */
         height: auto !important; /* 移动端高度自适应 */
         overflow-y: visible !important; /* 移动端不使用滚动条 */
+        padding-right: 0 !important; /* 移除滚动条空间 */
     }
 }
 
