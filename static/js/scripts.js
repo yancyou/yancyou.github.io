@@ -35,7 +35,10 @@ window.addEventListener('DOMContentLoaded', event => {
             const yml = jsyaml.load(text);
             Object.keys(yml).forEach(key => {
                 try {
-                    document.getElementById(key).innerHTML = yml[key];
+                    // 跳过title元素，避免覆盖HTML中设置的标题
+                    if (key !== 'title') {
+                        document.getElementById(key).innerHTML = yml[key];
+                    }
                 } catch {
                     console.log("Unknown id and value: " + key + "," + yml[key].toString())
                 }
