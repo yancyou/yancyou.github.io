@@ -87,11 +87,23 @@
 .top-section {
     position: relative;
     padding: 10rem 0;
-    background-position: center center !important; /* 改回居中显示 */
+    background-position: center center !important;
     background-size: cover !important;
-    height: 45rem !important; /* 增加高度确保全屏显示完整 */
-    overflow: visible !important; /* 修改为visible确保内容不被截断 */
-    background-attachment: fixed !important; /* 改为fixed使背景图片固定 */
+    height: 45rem !important;
+    overflow: visible !important;
+    background-color: #000 !important; /* 添加备用背景色 */
+}
+
+/* 为顶部区域添加暗色遮罩，确保文字清晰可读 */
+.top-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.55));
+    z-index: 0;
 }
 
 .top-section h1 {
@@ -328,110 +340,61 @@ section .main-body{
     background: rgba(0, 0, 0, 0.4);
 }
 
+/* 人像照片样式 */
 .photo {
-    position: fixed !important; /* 改为固定定位 */
-    right: 5%;
-    top: 25% !important;
-    z-index: 9999 !important; /* 提高z-index值 */
-    transition: all 0.3s ease;
-    display: block !important; /* 确保照片显示 */
-    opacity: 1 !important; /* 确保照片可见 */
-    visibility: visible !important; /* 确保照片可见 */
-    pointer-events: auto; /* 恢复指针事件，允许交互 */
-    transform: translateZ(0); /* 强制硬件加速，解决可能的渲染问题 */
+    position: absolute !important;
+    right: 5% !important;
+    top: 28rem !important;
+    z-index: 10 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .photo img {
-    height: 16rem;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: block !important; /* 确保图片显示 */
-    opacity: 1 !important; /* 确保图片可见 */
-    visibility: visible !important; /* 确保图片可见 */
-    max-width: none !important; /* 移除最大宽度限制 */
+    height: 16rem !important;
+    border: none !important;
+    border-radius: 50% !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3) !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
-.photo img:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-}
-
-.photo .screen {
-    position: absolute;
-    background-size: cover;
-    pointer-events: auto;
-}
-
-.photo .button {
-    position: absolute;
-    cursor: pointer;
-}
-
+/* 移动设备上的照片位置 */
 @media screen and (max-width: 991px) {
     .photo {
-        position: fixed !important; /* 固定定位 */
+        position: absolute !important;
         right: 5% !important;
-        top: 25% !important;
-        text-align: center;
-        margin: 0;
-        transform: scale(0.8) translateZ(0) !important;
-        z-index: 9999 !important;
-    }
-
-    .top-section {
-        height: 45rem !important;
-        overflow: visible !important;
-        background-attachment: fixed !important;
+        top: 20rem !important;
+        transform: scale(0.8) !important;
     }
 }
 
 @media screen and (max-width: 736px) {
     .photo {
-        position: fixed !important;
+        position: absolute !important;
         right: 5% !important;
-        top: 25% !important;
-        transform: scale(0.75) translateZ(0) !important;
-        z-index: 9999 !important;
-    }
-
-    .top-section {
-        height: 45rem !important;
-        overflow: visible !important;
-        background-attachment: fixed !important;
+        top: 20rem !important;
+        transform: scale(0.75) !important;
     }
 }
 
 @media screen and (max-width: 480px) {
     .photo {
-        position: fixed !important;
+        position: absolute !important;
         right: 5% !important;
-        top: 25% !important;
-        transform: scale(0.65) translateZ(0) !important;
-        z-index: 9999 !important;
-    }
-    
-    .top-section {
-        height: 45rem !important;
-        overflow: visible !important;
-        background-attachment: fixed !important;
+        top: 20rem !important;
+        transform: scale(0.7) !important;
     }
 }
 
 @media screen and (max-width: 375px) {
     .photo {
-        position: fixed !important;
+        position: absolute !important;
         right: 5% !important;
-        top: 25% !important;
-        transform: scale(0.55) translateZ(0) !important;
-        z-index: 9999 !important;
-    }
-    
-    .top-section {
-        height: 45rem !important;
-        overflow: visible !important;
-        background-attachment: fixed !important;
+        top: 20rem !important;
+        transform: scale(0.6) !important;
     }
 }
 
@@ -763,16 +726,19 @@ section .main-body{
 /* 确保在移动设备上也能正常滚动 - 保持滚动设置不变 */
 @media (max-width: 768px) {
     #publications-md {
-        max-height: 70vh !important; /* 保持固定高度 */
-        height: 70vh !important; /* 保持固定高度 */
-        overflow-y: scroll !important; /* 强制显示滚动条 */
-        padding-right: 10px !important; /* 为滚动条留出空间 */
-        -webkit-overflow-scrolling: touch !important; /* 平滑滚动 */
+        max-height: none !important; /* 移除高度限制 */
+        height: auto !important; /* 自动高度 */
+        overflow-y: visible !important; /* 不使用滚动条 */
+        padding-right: 0 !important; /* 移除右侧padding */
     }
 
     .publications-container {
-        max-height: 70vh !important; /* 限制容器高度 */
-        overflow: visible !important; /* 允许超出部分可见 */
+        max-height: none !important; /* 移除容器高度限制 */
+        overflow: visible !important; /* 允许内容正常显示 */
+    }
+    
+    .publication-item {
+        margin-bottom: 2rem !important; /* 增加项目间距 */
     }
 }
 
