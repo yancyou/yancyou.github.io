@@ -87,7 +87,7 @@
 .top-section {
     position: relative;
     padding: 10rem 0;
-    background-position: center center;
+    background-position: center 25% !important; /* 调整背景图片垂直位置 */
     background-size: cover !important;
     height: 35rem;
     overflow: hidden; /* 防止背景溢出 */
@@ -125,8 +125,9 @@
 .wisconsin-bg {
     filter: brightness(1.1) contrast(1.05);
     background-size: cover !important; /* 确保图片完全覆盖 */
-    background-position: center center !important; /* 居中显示 */
+    background-position: center 25% !important; /* 调整背景图片垂直位置 */
     background-repeat: no-repeat !important; /* 防止图片重复 */
+    background-attachment: fixed !important; /* 在滚动时保持背景图片固定 */
 }
 
 /* 为wisconsin-bg添加暗色遮罩，确保文字清晰可读 */
@@ -328,8 +329,9 @@ section .main-body{
     position: absolute;
     right: 5%;
     top: 26rem;
-    z-index: 10;
+    z-index: 100 !important; /* 大幅提高z-index确保照片在最上层 */
     transition: all 0.3s ease;
+    pointer-events: none; /* 防止照片阻止点击下方元素 */
 }
 
 .photo img {
@@ -338,6 +340,7 @@ section .main-body{
     border-radius: 50%;
     box-shadow: 0 8px 25px rgba(0,0,0,0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    pointer-events: auto; /* 确保照片本身可以被点击 */
 }
 
 .photo img:hover {
