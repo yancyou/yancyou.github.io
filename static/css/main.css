@@ -371,18 +371,18 @@ section .main-body{
 
 @media screen and (max-width: 991px) {
     .photo {
-        position: absolute; /* 保持绝对定位 */
+        position: fixed !important; /* 改为固定定位 */
         right: 5%; /* 与桌面端保持一致 */
-        top: 26rem; /* 与桌面端保持一致 */
+        top: 17rem !important; /* 调整垂直位置更上一些 */
         text-align: center;
         margin: 0;
-        transform: scale(0.9) translateZ(0); /* 稍微缩小以适应小屏幕 */
+        transform: scale(0.8) translateZ(0) !important; /* 稍微缩小以适应小屏幕 */
         z-index: 1000 !important; /* 保持高z-index */
     }
 
     .photo img {
-        height: 14rem;
-        max-width: none; /* 移除最大宽度限制 */
+        height: 13rem !important;
+        max-width: none !important; /* 移除最大宽度限制 */
     }
 
     .top-section {
@@ -413,14 +413,15 @@ section .main-body{
 
 @media screen and (max-width: 736px) {
     .photo {
-        position: absolute; /* 保持绝对定位 */
+        position: fixed !important; /* 改为固定定位 */
         right: 5%; /* 与桌面端保持一致 */
-        top: 26rem; /* 与桌面端保持一致 */
-        transform: scale(0.8); /* 更小屏幕进一步缩小 */
+        top: 17rem !important; /* 调整垂直位置 */
+        transform: scale(0.75) translateZ(0) !important; /* 更小屏幕进一步缩小 */
+        z-index: 1000 !important;
     }
 
     .photo img {
-        height: 14rem;
+        height: 12rem !important;
         margin: 0;
     }
 
@@ -461,10 +462,10 @@ section .main-body{
 /* 添加小屏幕手机的额外优化 */
 @media screen and (max-width: 480px) {
     .photo {
-        position: absolute;
+        position: fixed !important; /* 改为固定定位 */
         right: 5%;
-        top: 24rem; /* 略微上移 */
-        transform: scale(0.7) translateZ(0); /* 更小屏幕更小比例 */
+        top: 16rem !important; /* 略微上移 */
+        transform: scale(0.65) translateZ(0) !important; /* 更小屏幕更小比例 */
         z-index: 1000 !important; /* 保持高z-index */
     }
     
@@ -514,10 +515,10 @@ section .main-body{
 /* 添加最小屏幕尺寸优化 */
 @media screen and (max-width: 375px) {
     .photo {
-        position: absolute;
+        position: fixed !important; /* 改为固定定位 */
         right: 5%;
-        top: 22rem;
-        transform: scale(0.6) translateZ(0);
+        top: 15rem !important;
+        transform: scale(0.55) translateZ(0) !important;
         z-index: 1000 !important;
     }
     
@@ -836,7 +837,7 @@ section .main-body{
 #publications-md {
     max-height: 70vh !important; /* 使用!important强制应用 */
     height: 70vh !important; /* 固定高度 */
-    overflow-y: auto !important; /* 强制显示滚动条 */
+    overflow-y: scroll !important; /* 强制显示滚动条 */
     padding-right: 15px !important; /* 为滚动条留出空间 */
     padding-bottom: 20px !important; /* 底部留出空间 */
     display: block !important; /* 确保元素正确显示 */
@@ -873,10 +874,15 @@ section .main-body{
 /* 确保在移动设备上也能正常滚动 */
 @media (max-width: 768px) {
     #publications-md {
-        max-height: none !important; /* 移动端不限制高度 */
-        height: auto !important; /* 移动端高度自适应 */
-        overflow-y: visible !important; /* 移动端不使用滚动条 */
-        padding-right: 0 !important; /* 移除滚动条空间 */
+        max-height: 70vh !important; /* 保持固定高度 */
+        height: 70vh !important; /* 保持固定高度 */
+        overflow-y: scroll !important; /* 强制显示滚动条 */
+        padding-right: 10px !important; /* 为滚动条留出空间 */
+    }
+
+    .publications-container {
+        max-height: 70vh !important; /* 限制容器高度 */
+        overflow: visible !important; /* 允许超出部分可见 */
     }
 }
 
@@ -909,6 +915,9 @@ section .main-body{
 #about-md {
     font-weight: 500; /* 增加About部分文本的字体粗细 */
     color: #000000; /* 确保普通文字为纯黑色 */
+    width: 100%; /* 确保宽度为100% */
+    overflow-wrap: break-word; /* 允许长词自动换行 */
+    word-wrap: break-word; /* 兼容性 */
 }
 
 #about-md a {
@@ -1413,5 +1422,25 @@ a {
     border-radius: 5px;
     font-weight: 500;
     transition: all 0.3s ease;
+}
+
+/* 移动设备上的About部分特殊处理 */
+@media (max-width: 768px) {
+    #about-md {
+        font-size: 1.1rem !important;
+        line-height: 1.8rem !important;
+        padding: 0 0.5rem !important;
+    }
+    
+    #about-md p, #about-md li {
+        margin-bottom: 1rem !important;
+    }
+    
+    .about-name-section {
+        width: 100% !important;
+        padding: 0 1rem !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
 }
 
