@@ -10,7 +10,7 @@ For full paper list (not now, but I'm sure there will be more great work in the 
     <strong>Xuan Ouyang</strong><span class="author-marker">*</span>, Yuxi Lin<span class="author-marker">*</span>, Yujian Gan<span class="author-marker">*</span>, Zhilin Zhang, Jinxia Xie, Vassilis Routsis<span class="author-marker">†</span>
   </div>
   <div class="publication-venue">
-    <em>EMNLP Reviewing, 2025</em>
+    <em>AAAIReviewing, 2026</em>
   </div>
   <div class="publication-abstract">
     <span class="abstract-title">Abstract:</span>
