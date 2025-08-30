@@ -1235,7 +1235,7 @@ a {
 }
 
 .nav-link.active::after {
-    width: 70%;
+    width: 0 !important;
 }
 
 /* 修改媒体查询和打字动画样式，使其在移动端更好展示 */
