@@ -64,8 +64,8 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
     // Marked
-    marked.use({ mangle: false, headerIds: false })
-    section_names.forEach((name, idx) => {
+    marked.use({ mangle: false, headerIds: false });
+    const promises = section_names.map(name =>
         fetch(content_dir + name + '.md')
             .then(response => response.text())
             .then(markdown => {
@@ -76,14 +76,23 @@ window.addEventListener('DOMContentLoaded', event => {
                 if (name === 'publications') {
                     initPublicationInteractions();
                 }
-            }).then(() => {
-                // MathJax
-                MathJax.typeset();
             })
-            .catch(error => console.log(error));
-    })
+    );
 
-}); 
+    Promise.all(promises)
+        .then(() => {
+            // MathJax
+            MathJax.typeset();
+            
+            // Refresh ScrollSpy
+            const scrollSpy = bootstrap.ScrollSpy.getInstance(document.body);
+            if (scrollSpy) {
+                scrollSpy.refresh();
+            }
+        })
+        .catch(error => console.log(error));
+
+});
 
 // 初始化publication交互功能
 function initPublicationInteractions() {

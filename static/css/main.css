@@ -1234,10 +1234,6 @@ a {
     color: #4e54c8 !important;
 }
 
-.nav-link.active::after {
-    width: 0 !important;
-}
-
 /* 修改媒体查询和打字动画样式，使其在移动端更好展示 */
 @media screen and (max-width: 768px) {
     /* 移动端打字动画调整 */
