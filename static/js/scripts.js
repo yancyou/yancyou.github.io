@@ -91,7 +91,14 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         })
         .catch(error => console.log(error));
+});
 
+window.addEventListener('load', () => {
+    // Refresh ScrollSpy again after all resources are loaded
+    const scrollSpy = bootstrap.ScrollSpy.getInstance(document.body);
+    if (scrollSpy) {
+        scrollSpy.refresh();
+    }
 });
 
 // 初始化publication交互功能
