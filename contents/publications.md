@@ -45,7 +45,7 @@ For full paper list (not now, but I'm sure there will be more great work in the 
 
 <div class="publication-item">
   <div class="publication-title">
-    <h3>MelTrim: Coarse-to-Fine Data Pruning for Speech Recognition</h3>
+    <h3>MelTrim: Coarse-to-Fine Data Pruning for Speech Classification</h3>
     <button class="abstract-btn">Abstract</button>
   </div>
   <div class="publication-meta">
@@ -56,7 +56,7 @@ For full paper list (not now, but I'm sure there will be more great work in the 
   </div>
   <div class="publication-abstract">
     <span class="abstract-title">Abstract:</span>
-    Dataset Pruning (DP) aims to construct a coreset that achieves performance comparable to the original, full dataset. However, few studies have explored DP in the context of Speech Recognition (SR) tasks. Unlike image or text classification, SR is particularly challenging due to the difficulty in capturing the acoustic, semantic, and contextual representations. In this study, we propose a novel dataset pruning method for speech datasets, termed MelTrim, which uses a two-step coarse-to-fine framework designed to address these challenges. Specifically, in Step 1, MelTrim coarsely filters utterance-level redundant samples using DBSCAN clustering on Mel-Frequency Cepstral Coefficients (MFCC) features, which are first flattened and then reduced in dimensionality using UMAP. In Step 2, we perform frame-level redundancy pruning for each utterance via utility pruning, which aims to eliminate irrelevant frames within each utterance. To the best of our knowledge, this is the first dataset pruning approach designed for Speech Recognition tasks, demonstrating outstanding performance compared to classical general DP methods. Notably, for the Speech Emotion Recognition, our method achieves up to a 33.6% improvement in WA on the M3ED dataset. For the Speaker Identification tasks, it results in a 10.6% reduction in EER on the VoxCeleb1 dataset.
+    Dataset Pruning (DP) aims to construct a coreset that achieves performance comparable to the original, full dataset. However, few studies have explored DP in the context of Speech Classification (SC) tasks. Unlike image or text classification, SC is particularly challenging due to the difficulty in capturing the acoustic, semantic, and contextual representations. In this study, we propose a novel dataset pruning method for speech datasets, termed Meltrim, which uses a two-step coarse-to-fine framework designed to address these challenges. Specifically, in Step 1, Meltrim coarsely filters utterance-level redundant samples using DBSCAN clustering on Mel-Frequency Cepstral Coefficients (MFCC) features, which are first flattened and then reduced in dimensionality using UMAP. In Step 2, we perform frame-level redundancy pruning for each utterance via utility pruning, which aims to eliminate irrelevant frames within each utterance. To the best of our knowledge, this is the first dataset pruning approach designed for Speech Classification tasks, demonstrating outstanding performance compared to classical general DP methods. Notably, for the Speech Emotion Recognition, our method achieves up to a 49.5% improvement in WA (Weighted Accuracy) on the MEAD dataset. For the Speaker Identification tasks, it results in a 41.9% reduction in EER (Equal Error Rate) on the VoxCeleb1 dataset.
   </div>
   <div class="publication-links">
     <a href="javascript:void(0);" target="_blank">Paper</a>
