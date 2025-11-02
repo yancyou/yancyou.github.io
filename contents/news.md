@@ -1,3 +1,7 @@
-- **May 2025**: I'm happy to be selected as REU team members in UW-Madison
+- **October 2025**: Submitted 1 first co-author work to ACL 2026, good luck!
+- **September 2025**: Finish REU Project and submitted to ICLR 2026, good luck!
+- **August 2025**: Submitted 1 first author paper to AAAI 2026, good luck!
+- **May 2025**: I'm happy to be selected as REU team members in UW-Madison.
+- **February 2025**: Join SJSU Epic Lab as a research internship, working on Efficient LLM.
 - **January 2025**: I Joined the Marler Lab as a machine learning research assistant at UW-Madison
-- **September 2024**: Started a new journey at the University of Wisconsin-Madison
+- **August 2024**: Start a research internship in UCL, working on NLP application.
