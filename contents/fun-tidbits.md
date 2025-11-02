@@ -1,4 +1,4 @@
-Here are some interesting facts and hobbies about me:
+Here are some interesting facts about me:
 
 
 ### 📚 Teaching
