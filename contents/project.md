@@ -50,7 +50,7 @@
      This project fine-tunes Flan-T5-Large to predict the stance of tweets toward the COVID-19 vaccine, classifying each tweet into one of three categories:in-favor, against, neutral-or-unclear. It supports both full fine-tuning and inference with optional in-context few-shot examples.
     </p>
     <div class="project-links">
-      <a href="https://github.com/yancyou/Multi-Marginal-SB.git" class="project-link" target="_blank">
+      <a href="https://github.com/yancyou/stance_prediction.git" class="project-link" target="_blank">
         <i class="bi bi-github"></i> GitHub
       </a>
     </div>

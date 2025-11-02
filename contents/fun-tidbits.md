@@ -28,7 +28,6 @@ I have a passion for challenging myself academically and exploring advanced topi
 - Huge fan of mechanical keyboards
 
 ### 🎯 Life Philosophy -->
-> "Make it work, make it right, make it fast." - Kent Beck
 
 <!-- *This page is constantly evolving - just like me! Check back for updates.* -->
 

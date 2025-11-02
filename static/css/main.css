@@ -1650,6 +1650,154 @@ a {
 
 /* No ::after pseudo-element for no-icon version */
 
+/* Motto Section Styles */
+.motto-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.motto-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.3) 0%, transparent 50%),
+        url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+    opacity: 0.6;
+}
+
+.motto-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.motto-title {
+    font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+}
+
+.motto-divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    margin: 0 auto 3rem;
+}
+
+.motto-carousel {
+    position: relative;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.motto-slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.motto-slide.active {
+    opacity: 1;
+    position: relative;
+}
+
+.motto-text {
+    font-family: "Kanit", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.motto-text em {
+    font-style: italic;
+    font-weight: 700;
+    color: #ffd700;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 0 0 25px rgba(255, 215, 0, 0.3);
+}
+
+.motto-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 2.5rem;
+}
+
+.motto-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.motto-dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.2);
+}
+
+.motto-dot.active {
+    background: #ffffff;
+    border-color: #ffd700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .motto-section {
+        padding: 3rem 0;
+    }
+    
+    .motto-title {
+        font-size: 2rem;
+    }
+    
+    .motto-text {
+        font-size: 1.3rem;
+        padding: 0 1rem;
+    }
+    
+    .motto-carousel {
+        min-height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .motto-title {
+        font-size: 1.6rem;
+    }
+    
+    .motto-text {
+        font-size: 1.1rem;
+    }
+    
+    .motto-carousel {
+        min-height: 100px;
+    }
+}
+
 /* Lightbox Modal */
 .lightbox-modal {
     display: none;

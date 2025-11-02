@@ -272,6 +272,38 @@
         <span class="lightbox-next" onclick="changeImage(1)">&#10095;</span>
     </div>
 
+    <!-- Motto Section -->
+    <section class="motto-section">
+        <div class="container">
+            <h2 class="motto-title">Motto</h2>
+            <div class="motto-divider"></div>
+            <div class="motto-carousel">
+                <div class="motto-slide active">
+                    <p class="motto-text">没有 impact 的人生就像没活过一样</p>
+                </div>
+                <div class="motto-slide">
+                    <p class="motto-text">Make it work, make it right, make it fast. - Kent Beck</p>
+                </div>
+                <div class="motto-slide">
+                    <p class="motto-text">The only way to do great work is to love what you do.</p>
+                </div>
+                <div class="motto-slide">
+                    <p class="motto-text">Stay hungry, stay foolish.</p>
+                </div>
+                <div class="motto-slide">
+                    <p class="motto-text">体面是奢侈品，爱情是幻觉，只有梭哈一件高价值的事情，才能换来自由</p>
+                </div>
+                <div class="motto-slide">
+                    <p class="motto-text">The best time to plant a tree was 20 years ago. The second best time is now.</p>
+                </div>
+                <div class="motto-slide">
+                    <p class="motto-text">In the middle of difficulty lies opportunity.</p>
+                </div>
+            </div>
+            <div class="motto-dots"></div>
+        </div>
+    </section>
+
     <!-- Footer-->
     <footer class="bg-bottom text-center py-5">
         <div class="container px-5">
@@ -488,6 +520,64 @@
             if (e.target === this) {
                 closeLightbox();
             }
+        });
+
+        // Motto carousel functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.motto-slide');
+            const dotsContainer = document.querySelector('.motto-dots');
+            let currentSlide = 0;
+            let mottoInterval;
+
+            // Create dots
+            slides.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.className = 'motto-dot';
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsContainer.appendChild(dot);
+            });
+
+            const dots = document.querySelectorAll('.motto-dot');
+
+            function goToSlide(n) {
+                slides[currentSlide].classList.remove('active');
+                dots[currentSlide].classList.remove('active');
+                currentSlide = n;
+                if (currentSlide >= slides.length) currentSlide = 0;
+                if (currentSlide < 0) currentSlide = slides.length - 1;
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+            }
+
+            function nextSlide() {
+                goToSlide(currentSlide + 1);
+            }
+
+            function startCarousel() {
+                mottoInterval = setInterval(nextSlide, 5000); // Change every 5 seconds
+            }
+
+            function stopCarousel() {
+                clearInterval(mottoInterval);
+            }
+
+            // Start automatic carousel
+            startCarousel();
+
+            // Pause on hover
+            const mottoSection = document.querySelector('.motto-section');
+            mottoSection.addEventListener('mouseenter', stopCarousel);
+            mottoSection.addEventListener('mouseleave', startCarousel);
+
+            // Pause when tab is not visible
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden) {
+                    stopCarousel();
+                } else {
+                    startCarousel();
+                }
+            });
         });
     </script>
 
