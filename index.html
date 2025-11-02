@@ -80,6 +80,12 @@
                     <li class="nav-item">
                         <a class="nav-link me-lg-3" href="#news">NEWS</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="#resources">RESOURCES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="#fun-tidbits">FUN TIDBITS</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -229,6 +235,43 @@
     </section>
     <!-- News -->
 
+    <!-- Resources -->
+    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="resources">
+        <div class="container px-5">
+            <header>
+                <h2 id="resources-subtitle" class="section-header"><i class="bi bi-book-fill"></i>&nbsp;RESOURCES</h2>
+            </header>
+            <div class="section-content" id="resources-content">
+                <div class="main-body" id="resources-md"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Resources -->
+
+    <!-- Fun Tidbits -->
+    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="fun-tidbits">
+        <div class="container px-5">
+            <header>
+                <h2 id="fun-tidbits-subtitle" class="section-header"><i class="bi bi-star-fill"></i>&nbsp;FUN TIDBITS</h2>
+            </header>
+            <div class="section-content" id="fun-tidbits-content">
+                <div class="main-body" id="fun-tidbits-md"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Fun Tidbits -->
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox-modal">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+        <span class="lightbox-prev" onclick="changeImage(-1)">&#10094;</span>
+        <span class="lightbox-next" onclick="changeImage(1)">&#10095;</span>
+    </div>
+
     <!-- Footer-->
     <footer class="bg-bottom text-center py-5">
         <div class="container px-5">
@@ -322,6 +365,128 @@
                     // 确保光标完全消失
                     taglineSub.style.borderRight = 'none';
                 }, 8000);
+            }
+        });
+    </script>
+
+    <!-- Lightbox Gallery Script -->
+    <script>
+        let currentImageIndex = 0;
+        let galleryImages = [];
+        let currentGallerySet = [];
+
+        // Initialize gallery after page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(initGallery, 1000); // Wait for markdown to be rendered
+        });
+
+        function initGallery() {
+            // Find all gallery links (both with and without icon)
+            const links = document.querySelectorAll('.gallery-link, .gallery-link-no-icon');
+            
+            // Build gallery with support for multiple images per link
+            galleryImages = [];
+            links.forEach(link => {
+                const images = link.getAttribute('data-images') || link.getAttribute('data-image');
+                const captions = link.getAttribute('data-captions') || link.getAttribute('data-caption') || link.textContent;
+                
+                // Split by comma if multiple images
+                const imageArray = images.split(',').map(s => s.trim());
+                const captionArray = captions.split(',').map(s => s.trim());
+                
+                // Ensure captions match images count
+                while (captionArray.length < imageArray.length) {
+                    captionArray.push(captionArray[0] || link.textContent);
+                }
+                
+                galleryImages.push({
+                    images: imageArray,
+                    captions: captionArray
+                });
+            });
+
+            // Add click handlers
+            links.forEach((link, index) => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openLightbox(index);
+                });
+            });
+        }
+
+        function openLightbox(galleryIndex) {
+            // Set current gallery set
+            currentGallerySet = galleryImages[galleryIndex];
+            currentImageIndex = 0;
+            
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const caption = document.getElementById('lightbox-caption');
+
+            img.src = currentGallerySet.images[0];
+            caption.textContent = currentGallerySet.captions[0];
+            lightbox.classList.add('active');
+
+            // Prevent body scrolling when lightbox is open
+            document.body.style.overflow = 'hidden';
+            
+            // Update arrow visibility
+            updateArrowVisibility();
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            
+            // Loop within current gallery set
+            if (currentImageIndex >= currentGallerySet.images.length) {
+                currentImageIndex = 0;
+            } else if (currentImageIndex < 0) {
+                currentImageIndex = currentGallerySet.images.length - 1;
+            }
+            
+            const img = document.getElementById('lightbox-img');
+            const caption = document.getElementById('lightbox-caption');
+            img.src = currentGallerySet.images[currentImageIndex];
+            caption.textContent = currentGallerySet.captions[currentImageIndex];
+            
+            updateArrowVisibility();
+        }
+        
+        function updateArrowVisibility() {
+            const prevArrow = document.querySelector('.lightbox-prev');
+            const nextArrow = document.querySelector('.lightbox-next');
+            
+            // Show arrows only if there are multiple images
+            if (currentGallerySet.images.length > 1) {
+                prevArrow.style.display = 'flex';
+                nextArrow.style.display = 'flex';
+            } else {
+                prevArrow.style.display = 'none';
+                nextArrow.style.display = 'none';
+            }
+        }
+
+        // Close lightbox on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowLeft') {
+                changeImage(-1);
+            } else if (e.key === 'ArrowRight') {
+                changeImage(1);
+            }
+        });
+
+        // Close lightbox when clicking outside the image
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
             }
         });
     </script>

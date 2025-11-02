@@ -1,6 +1,6 @@
 const content_dir = 'contents/'
 const config_file = 'config.yml'
-const section_names = ['about', 'publications', 'awards', 'project', 'service', 'news']
+const section_names = ['about', 'publications', 'awards', 'project', 'service', 'news', 'resources', 'fun-tidbits']
 
 // Title override function to ensure correct title display
 function ensureCorrectTitle() {
