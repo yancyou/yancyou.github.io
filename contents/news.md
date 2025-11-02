@@ -1,7 +1,8 @@
 - **October 2025**: Submitted 1 first co-author work to ACL 2026, good luck!
 - **September 2025**: Finish REU Project and submitted to ICLR 2026, good luck!
 - **August 2025**: Submitted 1 first author paper to AAAI 2026, good luck!
+- **July 2025**: I joined Hulab as a research assistant, working on Multilingual learning.
 - **May 2025**: I'm happy to be selected as REU team members in UW-Madison.
-- **February 2025**: Join SJSU Epic Lab as a research internship, working on Efficient LLM.
-- **January 2025**: I Joined the Marler Lab as a machine learning research assistant at UW-Madison
-- **August 2024**: Start a research internship in UCL, working on NLP application.
+- **February 2025**: I Joined SJSU Epic Lab as a research intern, working on Efficient LLM.
+- **January 2025**: I Joined the Marler Lab as a machine learning research assistant at UW-Madison.
+- **August 2024**: Started a research internship in UCL, working on NLP application.
