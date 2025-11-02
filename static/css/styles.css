@@ -10888,7 +10888,8 @@ section {
    color: var(--bs-blue)
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #2937f0;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 500;
 }
 
 
