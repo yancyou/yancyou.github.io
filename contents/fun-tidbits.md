@@ -9,7 +9,7 @@ I am a person with a strong desire to express myself, and I enjoy deepening my k
 ### 🎓 Academic Curiosity
 I have a passion for challenging myself academically and exploring advanced topics.
 - I had the opportunity to take grad-level course [CS 760: Machine Learning](https://pages.cs.wisc.edu/~khodak/cs760fall2025/) and [CS 839: Foundation Models](https://pages.cs.wisc.edu/~fredsala/cs839/fall2025/index.html). It was an enriching experience that deepened my understanding of machine learning theory and frontier LLMs, and I'm grateful to have performed well in the coursework.
-- 🎉 <a href="#" class="gallery-link-no-icon" data-images="static/assets/img/gallery/grade.jpg, static/assets/img/gallery/mean.jpg" data-captions="CS760">I achieved 92 at a [CS 760: Machine Learning](https://pages.cs.wisc.edu/~khodak/cs760fall2025/) midterm.</a><a href="#" class="gallery-link-no-icon" data-image="static/assets/img/gallery/mean.jpg" data-caption="Class statistics"> The mean is 72.23</a>. Keep going!
+- 🎉 <a href="#" class="gallery-link-no-icon" data-images="static/assets/img/gallery/grade.jpg, static/assets/img/gallery/mean.jpg" data-captions="CS760">I achieved 92 at [CS 760: Machine Learning](https://pages.cs.wisc.edu/~khodak/cs760fall2025/) midterm.</a><a href="#" class="gallery-link-no-icon" data-image="static/assets/img/gallery/mean.jpg" data-caption="Class statistics"> The mean is 72.23</a>. Keep going!
 
 <!-- ### 🎮 Hobbies
 - Chess player (online rating: ~1500)
