@@ -4,7 +4,7 @@ Here are some interesting facts about me:
 ### 📚 Teaching
 I am a person with a strong desire to express myself, and I enjoy deepening my knowledge through teaching.
 - During my freshman summer, <a href="#" class="gallery-link" data-images="static/assets/img/gallery/Teaching0.jpg, static/assets/img/gallery/Teaching2.jpg, static/assets/img/gallery/Teaching3.jpg, static/assets/img/gallery/Teaching4.jpg, static/assets/img/gallery/Teaching5.jpg, static/assets/img/gallery/Teaching1.jpg" data-captions="Teaching in rural Guizhou">I taught in a rural area of Guizhou, China for a month</a>. There, I made close friends and shared my warmth and kindness with the local community.
-- During my sophomore summer, <a href="#" class="gallery-link" data-images="static/assets/img/gallery/English_0.jpg, static/assets/img/gallery/English1.jpg, static/assets/img/gallery/English3.jpg, static/assets/img/gallery/English4.jpg" data-captions="Teaching in Nanjing(Jiangsu Province)">I became the youngest teacher at China's largest IELTS training institution, teaching IELTS reading.</a>. I firmly believe that learning a language can open up unexpected opportunities for you.
+- During my sophomore summer, <a href="#" class="gallery-link" data-images="static/assets/img/gallery/English_0.jpg, static/assets/img/gallery/English1.jpg, static/assets/img/gallery/English3.jpg" data-captions="Teaching in Nanjing(Jiangsu Province)">I became the youngest teacher at China's largest IELTS training institution, teaching IELTS reading.</a>. I firmly believe that learning a language can open up unexpected opportunities for you.
 
 ### 🎓 Academic Curiosity
 I have a passion for challenging myself academically and exploring advanced topics.
