@@ -109,8 +109,14 @@ function initPublicationInteractions() {
         const abstractButtons = document.querySelectorAll('.abstract-btn');
         
         abstractButtons.forEach(button => {
-            // 默认状态为展开，设置按钮文本为隐藏摘要
-            button.textContent = 'Hide Abstract';
+            // 默认状态为关闭，设置按钮文本为Abstract
+            button.textContent = 'Abstract';
+
+            const publicationItem = button.closest('.publication-item');
+            const abstract = publicationItem.querySelector('.publication-abstract');
+            if (abstract) {
+                abstract.classList.add('is-hidden');
+            }
             
             button.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -119,10 +125,11 @@ function initPublicationInteractions() {
                 const abstract = publicationItem.querySelector('.publication-abstract');
                 
                 // 切换显示状态
-                abstract.style.display = abstract.style.display === 'none' ? 'block' : 'none';
+                const isHidden = abstract.classList.contains('is-hidden');
+                abstract.classList.toggle('is-hidden', !isHidden);
                 
                 // 更改按钮文本
-                if (abstract.style.display === 'none') {
+                if (abstract.classList.contains('is-hidden')) {
                     this.textContent = 'Abstract';
                 } else {
                     this.textContent = 'Hide Abstract';
