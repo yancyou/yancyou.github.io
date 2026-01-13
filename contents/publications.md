@@ -9,7 +9,7 @@ For full paper list (not now, but I'm sure there will be more great work in the 
      <strong>Xuan Ouyang</strong><span class="author-marker">*</span>, Shaobo Wang<span class="author-marker">*</span>,  Tianyi Xu<span class="author-marker">*</span>, Guo Chen, Jialin Liu, Tianyu Zhang, Junhao Zheng, Kexin Yang, Xingzhang Ren, Dayiheng Liu<span class="author-marker">†</span>, Linfeng Zhang†<span class="author-marker">†</span>
   </div>
   <div class="publication-venue">
-    <em>Under Review, 2026</em>
+    <em>ICML Reviewing, 2026</em>
   </div>
   <div class="publication-abstract">
     <span class="abstract-title">Abstract:</span>
@@ -33,7 +33,7 @@ For full paper list (not now, but I'm sure there will be more great work in the 
      <strong>Xuan Ouyang</strong><span class="author-marker">*</span>, Ishaan Kharbanda<span class="author-marker">*</span>,  Yudi Li<span class="author-marker">*</span>, Rahul Choudhary, Hanbaek Lyu<span class="author-marker">†</span>
   </div>
   <div class="publication-venue">
-    <em>ICLR Reviewing, 2026</em>
+    <em>ICML Reviewing, 2026</em>
   </div>
   <div class="publication-abstract">
     <span class="abstract-title">Abstract:</span>
@@ -51,7 +51,7 @@ For full paper list (not now, but I'm sure there will be more great work in the 
     <button class="abstract-btn">Abstract</button>
   </div>
   <div class="publication-meta">
-     <strong>Xuan Ouyang</strong><span class="author-marker">*</span>, Tianyi Xu<span class="author-marker">*</span>,  Binwei Yao, Junjie Hu<span class="author-marker">†</span>
+     <strong>Xuan Ouyang</strong><span class="author-marker">*</span>, Tianyi Xu<span class="author-marker">*</span>,  Binwei Yao, Shoua Xiong, Sara Misurelli, Maichou Lor Junjie Hu<span class="author-marker">†</span>
   </div>
   <div class="publication-venue">
     <em>ACL ARR January Reviewing, 2026</em>
@@ -72,7 +72,7 @@ For full paper list (not now, but I'm sure there will be more great work in the 
     <button class="abstract-btn">Abstract</button>
   </div>
   <div class="publication-meta">
-    Shaobo Wang<span class="author-marker">*</span>, <strong>Xuan Ouyang</strong><span class="author-marker">*</span>, Xintong Li<span class="author-marker">*</span>, Tianle Niu, Zhengkun Ge, Yue Min, Xiaoqian Liu, Hankun Wang, Linfeng Zhang<span class="author-marker">†</span>
+    Shaobo Wang<span class="author-marker">*</span>, <strong>Xuan Ouyang</strong><span class="author-marker">*</span>, Tianle Niu<span class="author-marker">*</span>, Xintong Li, Zhengkun Ge, Yue Min, Xiaoqian Liu, Hankun Wang, Linfeng Zhang<span class="author-marker">†</span>
   </div>
   <div class="publication-venue">
     <em>ACL ARR October Reviewing, 2026</em>
