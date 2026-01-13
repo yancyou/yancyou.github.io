@@ -1,7 +1,4 @@
 - **December 2025**: We are excited to introduce [<span style="color:#0400ff">OPUS</span>](https://gszfwsb.notion.site/OPUS-Towards-Efficient-and-Principled-Data-Selection-in-Large-Language-Model-Pre-training-in-Every--2dadcecbab9e80d2b34bcceaa926bb1e) (Optimizer-aware Projected Utility Selection), a theoretically principled framework for dynamic data selection in every iteration during LLM pre-training. Check out the [<span style="color:#0400ff">the technology blog here!</span>](https://gszfwsb.notion.site/OPUS-Towards-Efficient-and-Principled-Data-Selection-in-Large-Language-Model-Pre-training-in-Every--2dadcecbab9e80d2b34bcceaa926bb1e)
-- **October 2025**: Submitted 1 first co-author work to ACL 2026, good luck!
-- **September 2025**: Finish REU Project and submitted to ICLR 2026, good luck!
-- **August 2025**: Submitted 1 first author paper to AAAI 2026, good luck!
 - **July 2025**: I joined Hulab as a research assistant, working on Multilingual learning.
 - **May 2025**: I'm happy to be selected as REU team members in UW-Madison.
 - **February 2025**: I Joined SJSU Epic Lab as a research intern, working on Efficient LLM.
