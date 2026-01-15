@@ -40,7 +40,7 @@ For full paper list (not now, but I'm sure there will be more great work in the 
     We propose a unified framework for multimodal generation and knowledge distillation by leveraging the Multi-marginal Static Schrödinger Bridge (MSSB) with general f -divergence, where we use flexible and task-oriented prior measures. This approach allows us to adapt the MSSB problem to diverse tasks—from text-guided image generation to model compression—simply by designing an appropriate prior. For generative modeling, we develop an efficient block-stochastic optimization scheme and a practical Langevin-based inference method. For knowledge distillation, this framework has a clear information-theoretic interpretation: we prove that our MSSB-based Knowledge Distillation (MSSB-KD) implements a variational relaxation of the Information Bottleneck principle. Our novel MSSB-KD formulation demonstrates strong robustness to noisy supervision, significant gains in multi-teacher settings, and scalability across architectures. Finally, we theoretically prove the equivalence between Static and Dynamic Schrödinger Bridges for general f-divergences, enabling the use of divergences better suited to the task at hand.
   </div>
   <div class="publication-links">
-    <a href="javascript:void(0);" target="_blank">Paper</a>
+    <a href="https://arxiv.org/pdf/2601.09050" target="_blank">Paper</a>
     <a href="javascript:void(0);" target="_blank">Code</a>
   </div>
 </div>
@@ -109,4 +109,3 @@ For full paper list (not now, but I'm sure there will be more great work in the 
 </div>
 
 <div class="publication-footnote">* First author/co-author | † Corresponding author</div>
-
