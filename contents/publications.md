@@ -1,4 +1,4 @@
-For full paper list (not now, but I'm sure there will be more great work in the future), please refer to my [Google Scholar](https://scholar.google.com/citations?user=7gsdLw4AAAAJ&hl=en).
+For full paper list (not now, but I'm sure there will be more great work in the future), please refer to my [Google Scholar](https://scholar.google.com/citations?user=OUAMdYcAAAAJ&hl=en).
 
 <div class="publication-item">
   <div class="publication-title">
