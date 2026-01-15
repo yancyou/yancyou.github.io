@@ -6,7 +6,7 @@ For full paper list (not now, but I'm sure there will be more great work in the 
     <button class="abstract-btn">Abstract</button>
   </div>
   <div class="publication-meta">
-     <strong>Xuan Ouyang</strong><span class="author-marker">*</span>, Shaobo Wang<span class="author-marker">*</span>,  Tianyi Xu<span class="author-marker">*</span>, Guo Chen, Jialin Liu, Tianyu Zhang, Junhao Zheng, Kexin Yang, Xingzhang Ren, Dayiheng Liu<span class="author-marker">†</span>, Linfeng Zhang†<span class="author-marker">†</span>
+     <strong>Xuan Ouyang</strong><span class="author-marker">*</span>, Shaobo Wang<span class="author-marker">*</span>,  Tianyi Xu<span class="author-marker">*</span>, Yuzheng Hu, Jialin Liu, Guo Chen, Tianyu Zhang, Junhao Zheng, Kexin Yang, Xingzhang Ren, Dayiheng Liu<span class="author-marker">†</span>, Linfeng Zhang†<span class="author-marker">†</span>
   </div>
   <div class="publication-venue">
     <em>ICML Reviewing, 2026</em>
@@ -40,7 +40,7 @@ For full paper list (not now, but I'm sure there will be more great work in the 
     We propose a unified framework for multimodal generation and knowledge distillation by leveraging the Multi-marginal Static Schrödinger Bridge (MSSB) with general f -divergence, where we use flexible and task-oriented prior measures. This approach allows us to adapt the MSSB problem to diverse tasks—from text-guided image generation to model compression—simply by designing an appropriate prior. For generative modeling, we develop an efficient block-stochastic optimization scheme and a practical Langevin-based inference method. For knowledge distillation, this framework has a clear information-theoretic interpretation: we prove that our MSSB-based Knowledge Distillation (MSSB-KD) implements a variational relaxation of the Information Bottleneck principle. Our novel MSSB-KD formulation demonstrates strong robustness to noisy supervision, significant gains in multi-teacher settings, and scalability across architectures. Finally, we theoretically prove the equivalence between Static and Dynamic Schrödinger Bridges for general f-divergences, enabling the use of divergences better suited to the task at hand.
   </div>
   <div class="publication-links">
-    <a href="https://arxiv.org/pdf/2601.09050" target="_blank">Paper</a>
+    <a href="https://openreview.net/pdf?id=7WrMAQ1XDq" target="_blank">Paper</a>
     <a href="javascript:void(0);" target="_blank">Code</a>
   </div>
 </div>
@@ -61,7 +61,7 @@ For full paper list (not now, but I'm sure there will be more great work in the 
     Tonal low-resource languages are widely spoken yet remain underserved by modern speech technology. A key challenge is learning representations that are speaker-invariant (robust to nuisance variation such as gender) while remaining tone-aware, since tone often carries lexical meaning. We propose SITA, a lightweight adaptation recipe for pretrained wav2vec-style encoders that enforces these two requirements within a single shared model. SITA uses staged multi-objective training: (i) a cross-gender contrastive objective encourages lexical consistency across speakers, while a tone-repulsive loss prevents tone collapse by explicitly separating same-word different-tone realizations; and (ii) an auxiliary Connectionist Temporal Classification (CTC)-based ASR objective with distillation stabilizes recognition-relevant structure. We evaluate primarily on Hmong, a highly tonal and severely under-resourced language where off-the-shelf multilingual encoders fail. On a curated Hmong word corpus, SITA improves cross-gender lexical retrieval (Top-1 up to 0.7 versus 0.1 for XLS-R) and yields substantially stronger tone separation (hard-negative dissimilarity up to 0.65 versus near-zero in baselines), while maintaining usable ASR accuracy relative to an XLS-R teacher. We further observe similar gains when transferring the same recipe to Mandarin, suggesting InvaTone is a general, plug-in approach for adapting multilingual speech encoders to tonal languages.
   </div>
   <div class="publication-links">
-    <a href="javascript:void(0);" target="_blank">Paper</a>
+    <a href="https://arxiv.org/pdf/2601.09050" target="_blank">Paper</a>
     <a href="javascript:void(0);" target="_blank">Code</a>
   </div>
 </div>
