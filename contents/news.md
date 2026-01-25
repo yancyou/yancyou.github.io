@@ -1,6 +1,5 @@
 - **December 2025**: We are excited to introduce [<span style="color:#0400ff">OPUS</span>](https://gszfwsb.notion.site/OPUS-Towards-Efficient-and-Principled-Data-Selection-in-Large-Language-Model-Pre-training-in-Every--2dadcecbab9e80d2b34bcceaa926bb1e) (Optimizer-aware Projected Utility Selection), a theoretically principled framework for dynamic data selection in every iteration during LLM pre-training. Check out the [<span style="color:#0400ff">the technology blog here!</span>](https://gszfwsb.notion.site/OPUS-Towards-Efficient-and-Principled-Data-Selection-in-Large-Language-Model-Pre-training-in-Every--2dadcecbab9e80d2b34bcceaa926bb1e)
-- **July 2025**: I joined Hulab as a research assistant, working on Multilingual learning.
-- **May 2025**: I'm happy to be selected as REU team members in UW-Madison.
-- **February 2025**: I Joined SJTU Epic Lab as a research intern, working on Efficient LLM.
-- **January 2025**: I Joined the Marler Lab as a machine learning research assistant at UW-Madison.
-- **August 2024**: Started a research internship in UCL, working on NLP application.
+- **July 2025**: I joined Hulab as a research assistant, working on Multilingual learning.  [<span style="color:#0400ff">(SITA)</span>](https://arxiv.org/pdf/2601.09050)
+- **May 2025**: I'm happy to be selected as REU team members in UW-Madison. [<span style="color:#0400ff">(MSSB)</span>](https://openreview.net/pdf?id=7WrMAQ1XDq)
+- **February 2025**: I Joined SJTU Epic Lab as a research intern, working on Efficient LLM. [<span style="color:#0400ff">(MelTrim)</span>](javascript:void(0);)
+- **August 2024**: Started a research internship in UCL, working on NLP application. [<span style="color:#0400ff">(SpiderS Benchmark)</span>](javascript:void(0);)
