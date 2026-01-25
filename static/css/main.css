@@ -195,6 +195,10 @@ section header h2{
 }
 
 .about-social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
     text-align: center;
     margin-bottom: 1.5rem;
     margin-top: 1rem;
@@ -207,7 +211,7 @@ section header h2{
     border-radius: 5px;
     font-weight: 500;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* 弹性动画 */
-    margin: 0 0.3rem 0.5rem 0;
+    margin: 0;
     position: relative;
     overflow: hidden;
 }
@@ -280,6 +284,12 @@ section header h2{
 .about-social-icons .btn-x {
     background-color: #000000;
     border-color: #000000;
+    color: white;
+}
+
+.about-social-icons .btn-rednote {
+    background-color: #ff2442;
+    border-color: #ff2442;
     color: white;
 }
 
