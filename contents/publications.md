@@ -11,6 +11,7 @@ For full paper list (not now, but I'm sure there will be more great work in the 
   <div class="publication-venue">
     <em>ICML Reviewing, 2026</em>
   </div>
+  <div class="publication-highlight">🏆 Award: Top #1 Paper of the day at <a href="https://huggingface.co/papers/2602.05400" target="_blank">Hugging Face Daily Papers</a> (Feb.11 2026).</div>
   <div class="publication-abstract">
     <span class="abstract-title">Abstract:</span>
     As high-quality public text approaches exhaustion, a phenomenon known as the Data Wall, pre-training is shifting from <em>more tokens</em> to <em>better tokens</em>. However, existing methods either rely on heuristic static filters that ignore training dynamics, or use dynamic yet optimizer-agnostic criteria based on raw gradients. We propose <strong>OPUS</strong> (<strong>O</strong>ptimizer-induced <strong>P</strong>rojected <strong>U</strong>tility <strong>S</strong>election), a dynamic data selection framework that defines utility in the optimizer-induced update space. OPUS scores candidates by projecting their effective updates, shaped by modern optimizers, onto a target direction derived from a stable, in-distribution proxy. To ensure scalability, we employ Ghost technique with CountSketch for computational efficiency, and Boltzmann sampling for data diversity, incurring only 4.7% additional compute overhead. OPUS achieves remarkable results across diverse corpora, quality tiers, optimizers, and model scales. In pre-training of GPT-2 Large/XL on FineWeb and FineWeb-Edu with 30B tokens, OPUS outperforms industrial-level baselines and even full 200B-token training. Moreover, when combined with industrial-level static filters, OPUS further improves pre-training efficiency, even with lower-quality data. Furthermore, in continued pre-training of Qwen3-8B-Base on SciencePedia, OPUS achieves superior performance using only 0.5B tokens compared to full training with 3B tokens, demonstrating significant data efficiency gains in specialized domains.
@@ -28,7 +29,7 @@ For full paper list (not now, but I'm sure there will be more great work in the 
     <a href="https://yancyou.github.io/OPUS_page/" target="_blank">
       <i class="bi bi-globe"></i> Project Website
     </a>
-  </div>
+</div>
 </div>
 
 <div class="publication-item">

@@ -2257,3 +2257,20 @@ a {
         height: 250px;
     }
 }
+
+.publication-highlight {
+    margin-top: 0.7rem;
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: #d62828;
+}
+
+.publication-highlight a {
+    color: #d62828;
+    text-decoration: none;
+}
+
+.publication-highlight a:hover {
+    color: #b51f1f;
+    text-decoration: none;
+}
