@@ -6,7 +6,10 @@ For full paper list (not now, but I'm sure there will be more great work in the 
     <button class="abstract-btn">Abstract</button>
   </div>
   <div class="publication-meta">
-     <strong>Xuan Ouyang</strong><span class="author-marker">*</span>, Shaobo Wang<span class="author-marker">*</span>,  Tianyi Xu<span class="author-marker">*</span>, Yuzheng Hu, Jialin Liu, Guo Chen, Tianyu Zhang, Junhao Zheng, Kexin Yang, Xingzhang Ren, Dayiheng Liu<span class="author-marker">†</span>, Linfeng Zhang†<span class="author-marker">†</span>
+     <strong>Xuan Ouyang</strong><span class="author-marker">*</span>, Shaobo Wang<span class="author-marker">*</span>,  Tianyi Xu<span class="author-marker">*</span>, Yuzheng Hu, Jialin Liu, Guo Chen, Tianyu Zhang, Junhao Zheng, Kexin Yang, Xingzhang Ren<span class="author-marker">†</span>, Dayiheng Liu<span class="author-marker">†</span>, Linfeng Zhang†<span class="author-marker">†</span>
+  </div>
+  <div class="publication-venue">
+    <em>ICLR 2026 DATA-FM</em>
   </div>
   <div class="publication-venue">
     <em>ICML Reviewing, 2026</em>
