@@ -8,13 +8,8 @@ For full paper list (not now, but I'm sure there will be more great work in the 
   <div class="publication-meta">
      <strong>Xuan Ouyang</strong><span class="author-marker">*</span>, Shaobo Wang<span class="author-marker">*</span>,  Tianyi Xu<span class="author-marker">*</span>, Yuzheng Hu, Jialin Liu, Guo Chen, Tianyu Zhang, Junhao Zheng, Kexin Yang, Xingzhang Ren<span class="author-marker">†</span>, Dayiheng Liu<span class="author-marker">†</span>, Linfeng Zhang†<span class="author-marker">†</span>
   </div>
-  <div class="publication-venue">
-    <em>ICLR 2026 DATA-FM</em>
-  </div>
-  <div class="publication-venue">
-    <em>ICML Reviewing, 2026</em>
-  </div>
-  <div class="publication-highlight">🏆 Award: Top #1 Paper of the day at <a href="https://huggingface.co/papers/month/2026-02" target="_blank">Hugging Face Daily and Monthly Papers</a> (Feb.11 2026).</div>
+   <div class="publication-highlight">🏆 ICML 2026, spotlight(top 2.2%).</div>
+  <div class="publication-highlight">Top #1 Paper of the day at <a href="https://huggingface.co/papers/month/2026-02" target="_blank">Hugging Face Daily and Monthly Papers</a> (Feb.11 2026).</div>
   <div class="publication-abstract">
     <span class="abstract-title">Abstract:</span>
     As high-quality public text approaches exhaustion, a phenomenon known as the Data Wall, pre-training is shifting from <em>more tokens</em> to <em>better tokens</em>. However, existing methods either rely on heuristic static filters that ignore training dynamics, or use dynamic yet optimizer-agnostic criteria based on raw gradients. We propose <strong>OPUS</strong> (<strong>O</strong>ptimizer-induced <strong>P</strong>rojected <strong>U</strong>tility <strong>S</strong>election), a dynamic data selection framework that defines utility in the optimizer-induced update space. OPUS scores candidates by projecting their effective updates, shaped by modern optimizers, onto a target direction derived from a stable, in-distribution proxy. To ensure scalability, we employ Ghost technique with CountSketch for computational efficiency, and Boltzmann sampling for data diversity, incurring only 4.7% additional compute overhead. OPUS achieves remarkable results across diverse corpora, quality tiers, optimizers, and model scales. In pre-training of GPT-2 Large/XL on FineWeb and FineWeb-Edu with 30B tokens, OPUS outperforms industrial-level baselines and even full 200B-token training. Moreover, when combined with industrial-level static filters, OPUS further improves pre-training efficiency, even with lower-quality data. Furthermore, in continued pre-training of Qwen3-8B-Base on SciencePedia, OPUS achieves superior performance using only 0.5B tokens compared to full training with 3B tokens, demonstrating significant data efficiency gains in specialized domains.
@@ -40,6 +35,31 @@ For full paper list (not now, but I'm sure there will be more great work in the 
 
 <div class="publication-item">
   <div class="publication-title">
+    <h3>MelTrim: Coarse-to-Fine Data Pruning for Speech Classification</h3>
+    <button class="abstract-btn">Abstract</button>
+  </div>
+  <div class="publication-meta">
+    Shaobo Wang<span class="author-marker">*</span>, Tianle Niu<span class="author-marker">*</span>, <strong>Xuan Ouyang</strong><span class="author-marker">*</span>, Xintong Li, Zhengkun Ge, Yue Min, Xiaoqian Liu, Hankun Wang, Linfeng Zhang<span class="author-marker">†</span>
+  </div>
+  <div class="publication-venue">
+    <em>ACL 2026(Findings) Long Paper</em>
+  </div>
+  <div class="publication-abstract">
+    <span class="abstract-title">Abstract:</span>
+    Dataset Pruning (DP) aims to construct a coreset that achieves performance comparable to the original, full dataset. However, few studies have explored DP in the context of Speech Classification (SC) tasks. Unlike image or text classification, SC is particularly challenging due to the difficulty in capturing the acoustic, semantic, and contextual representations. In this study, we propose a novel dataset pruning method for speech datasets, termed Meltrim, which uses a two-step coarse-to-fine framework designed to address these challenges. Specifically, in Step 1, Meltrim coarsely filters utterance-level redundant samples using DBSCAN clustering on Mel-Frequency Cepstral Coefficients (MFCC) features, which are first flattened and then reduced in dimensionality using UMAP. In Step 2, we perform frame-level redundancy pruning for each utterance via utility pruning, which aims to eliminate irrelevant frames within each utterance. To the best of our knowledge, this is the first dataset pruning approach designed for Speech Classification tasks, demonstrating outstanding performance compared to classical general DP methods. Notably, for the Speech Emotion Recognition, our method achieves up to a 49.5% improvement in WA (Weighted Accuracy) on the MEAD dataset. For the Speaker Identification tasks, it results in a 41.9% reduction in EER (Equal Error Rate) on the VoxCeleb1 dataset.
+  </div>
+  <div class="publication-links">
+    <a href="javascript:void(0);" target="_blank">
+      <i class="bi bi-file-earmark-text"></i> Paper
+    </a>
+    <a href="javascript:void(0);" target="_blank">
+      <i class="bi bi-github"></i> Code
+    </a>
+  </div>
+</div>
+
+<div class="publication-item">
+  <div class="publication-title">
     <h3>Multi-Marginal f-Divergence Schrödinger Bridges: Towards a Unifying Framework for Generation and Distillation</h3>
     <button class="abstract-btn">Abstract</button>
   </div>
@@ -47,7 +67,7 @@ For full paper list (not now, but I'm sure there will be more great work in the 
      <strong>Xuan Ouyang</strong><span class="author-marker">*</span>, Ishaan Kharbanda<span class="author-marker">*</span>,  Yudi Li<span class="author-marker">*</span>, Rahul Choudhary, Hanbaek Lyu<span class="author-marker">†</span>
   </div>
   <div class="publication-venue">
-    <em>ICML Reviewing, 2026</em>
+    <em>Under Review</em>
   </div>
   <div class="publication-abstract">
     <span class="abstract-title">Abstract:</span>
@@ -72,7 +92,7 @@ For full paper list (not now, but I'm sure there will be more great work in the 
      <strong>Xuan Ouyang</strong><span class="author-marker">*</span>, Tianyi Xu<span class="author-marker">*</span>,  Binwei Yao, Shoua Xiong, Sara Misurelli, Maichou Lor, Junjie Hu<span class="author-marker">†</span>
   </div>
   <div class="publication-venue">
-    <em>ACL ARR January Reviewing, 2026</em>
+    <em>Under Review</em>
   </div>
   <div class="publication-abstract">
     <span class="abstract-title">Abstract:</span>
@@ -90,31 +110,6 @@ For full paper list (not now, but I'm sure there will be more great work in the 
 
 <div class="publication-item">
   <div class="publication-title">
-    <h3>MelTrim: Coarse-to-Fine Data Pruning for Speech Classification</h3>
-    <button class="abstract-btn">Abstract</button>
-  </div>
-  <div class="publication-meta">
-    Shaobo Wang<span class="author-marker">*</span>, <strong>Xuan Ouyang</strong><span class="author-marker">*</span>, Tianle Niu<span class="author-marker">*</span>, Xintong Li, Zhengkun Ge, Yue Min, Xiaoqian Liu, Hankun Wang, Linfeng Zhang<span class="author-marker">†</span>
-  </div>
-  <div class="publication-venue">
-    <em>ACL ARR October Reviewing, 2026</em>
-  </div>
-  <div class="publication-abstract">
-    <span class="abstract-title">Abstract:</span>
-    Dataset Pruning (DP) aims to construct a coreset that achieves performance comparable to the original, full dataset. However, few studies have explored DP in the context of Speech Classification (SC) tasks. Unlike image or text classification, SC is particularly challenging due to the difficulty in capturing the acoustic, semantic, and contextual representations. In this study, we propose a novel dataset pruning method for speech datasets, termed Meltrim, which uses a two-step coarse-to-fine framework designed to address these challenges. Specifically, in Step 1, Meltrim coarsely filters utterance-level redundant samples using DBSCAN clustering on Mel-Frequency Cepstral Coefficients (MFCC) features, which are first flattened and then reduced in dimensionality using UMAP. In Step 2, we perform frame-level redundancy pruning for each utterance via utility pruning, which aims to eliminate irrelevant frames within each utterance. To the best of our knowledge, this is the first dataset pruning approach designed for Speech Classification tasks, demonstrating outstanding performance compared to classical general DP methods. Notably, for the Speech Emotion Recognition, our method achieves up to a 49.5% improvement in WA (Weighted Accuracy) on the MEAD dataset. For the Speaker Identification tasks, it results in a 41.9% reduction in EER (Equal Error Rate) on the VoxCeleb1 dataset.
-  </div>
-  <div class="publication-links">
-    <a href="javascript:void(0);" target="_blank">
-      <i class="bi bi-file-earmark-text"></i> Paper
-    </a>
-    <a href="javascript:void(0);" target="_blank">
-      <i class="bi bi-github"></i> Code
-    </a>
-  </div>
-</div>
-
-<div class="publication-item">
-  <div class="publication-title">
     <h3>From Single-SQL to Multi-SQL: Bridging Real-World Needs with the SpiderS Benchmark</h3>
     <button class="abstract-btn">Abstract</button>
   </div>
@@ -122,7 +117,7 @@ For full paper list (not now, but I'm sure there will be more great work in the 
     <strong>Xuan Ouyang</strong><span class="author-marker">*</span>, Yujian Gan<span class="author-marker">*</span>, Yuxi Lin<span class="author-marker"></span>, Zhilin Zhang, Jinxia Xie, Vassilis Routsis<span class="author-marker">†</span>
   </div>
   <div class="publication-venue">
-    <em>ACL ARR January Reviewing, 2026</em>
+    <em>under Review</em>
   </div>
   <div class="publication-abstract">
     <span class="abstract-title">Abstract:</span>
