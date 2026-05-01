@@ -8,7 +8,7 @@ For full paper list (not now, but I'm sure there will be more great work in the 
   <div class="publication-meta">
      <strong>Xuan Ouyang</strong><span class="author-marker">*</span>, Shaobo Wang<span class="author-marker">*</span>,  Tianyi Xu<span class="author-marker">*</span>, Yuzheng Hu, Jialin Liu, Guo Chen, Tianyu Zhang, Junhao Zheng, Kexin Yang, Xingzhang Ren<span class="author-marker">†</span>, Dayiheng Liu<span class="author-marker">†</span>, Linfeng Zhang†<span class="author-marker">†</span>
   </div>
-   <div class="publication-highlight">🏆 ICML 2026, spotlight(top 2.2%).</div>
+   <div class="publication-highlight">🏆 ICML 2026, Spotlight(top 2.2%).</div>
   <div class="publication-highlight">Top #1 Paper of the day at <a href="https://huggingface.co/papers/month/2026-02" target="_blank">Hugging Face Daily and Monthly Papers</a> (Feb.11 2026).</div>
   <div class="publication-abstract">
     <span class="abstract-title">Abstract:</span>
