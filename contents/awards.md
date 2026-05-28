@@ -1,1 +1,1 @@
-- ICML 2026@Seoul, **spotlight** *(Top 2.2%)*
+- ICML 2026@Seoul, **Oral** *(Top 0.7%)*

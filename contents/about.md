@@ -2,5 +2,5 @@ I am a incoming PhD student majoring in **[<span style="color:#0400ff">Computer 
 
 #### Research
 
-Working on foundation models, both from data and LLM architecture perspective. Love to explore new paradiam for pretraining and language modeling.
+Working on foundation models, both from data and LLM architecture perspective. Love to explore new paradigm for pretraining and language modeling.
 
