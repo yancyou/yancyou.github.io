@@ -14,7 +14,7 @@
     <div class="project-links">
       <a href="https://gszfwsb.notion.site/OPUS-Towards-Efficient-and-Principled-Data-Selection-in-Large-Language-Model-Pre-training-in-Every--2dadcecbab9e80d2b34bcceaa926bb1e" class="project-link" target="_blank">
         <i class="bi bi-journal-text"></i> Blog
-      <a href="https://github.com/yancyou/Muon-Pretrain.git" class="project-link" target="_blank">
+      <a href="https://github.com/gszfwsb/OPUS" class="project-link" target="_blank">
         <i class="bi bi-github"></i> GitHub
       </a>
       </a>

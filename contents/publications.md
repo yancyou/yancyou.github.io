@@ -60,6 +60,50 @@ For full paper list (not now, but I'm sure there will be more great work in the 
 
 <div class="publication-item">
   <div class="publication-title">
+    <h3>Test-Time Training with Next-Token Prediction</h3>
+    <button class="abstract-btn">Abstract</button>
+  </div>
+  <div class="publication-meta">
+     <strong>Xuan Ouyang</strong><span class="author-marker">*</span>, Zefan Cai<span class="author-marker">*</span>, Junjie Hu<span class="author-marker">†</span>
+  </div>
+  <div class="publication-venue">
+    <em>Under Review</em>
+  </div>
+  <div class="publication-abstract">
+    <span class="abstract-title">Abstract:</span>
+    Next-token prediction is the self-supervised signal that trains language models,
+    and every observed prompt token provides the same signal at test time. We study
+    whether this signal can define the inner-loop objective for test-time training (TTT) in
+    pretrained long-context language models. Many TTT architectures require models
+    to be trained with test-time adaptation in mind, limiting their direct applicability
+    to released LLM checkpoints. While recent in-place TTT methods make fastweight adaptation possible for pretrained LLMs without redesigning the backbone,
+    they leave a central question unresolved: what should each test-time write store?
+    Existing recipes train the fast weight to match a learned local value proxy but
+    they are not directly tied to the self-supervised next-token prediction signal. We
+    introduce Test-Time Training with Next-Token Prediction (TTT-NTP), a drop-in fastweight adaptation method for pretrained LLMs that instead supervises updates
+    using the model’s own next contextual hidden state. This makes each local write
+    follow the same causal computation that supports next-token prediction: the
+    value target is a pointwise linear projection of a single next-position contextual
+    state. On RULER Full-13 (averaged over 4k, 8k, 16k, and 32k context lengths),
+    TTT-NTP is the only method that consistently improves the released backbone
+    across four models spanning three families and a 0.6–8B size range: Llama-3.1-8B
+    (+3.9), Mistral-7B-v0.3 (+3.0), and the Qwen3 series (Qwen3-4B +4.1, Qwen3-0.6B
+    +2.9). On the real-world LongBench-v2 long-document QA benchmark, TTT-NTP
+    improves over the base model on both Llama-3.1-8B (+5.6) and Mistral-7B-v0.3
+    (+3.7), while preserving commonsense and knowledge performance.
+  </div>
+  <div class="publication-links">
+    <a href="https://arxiv.org/pdf/2606.21803" target="_blank">
+      <i class="bi bi-file-earmark-text"></i> Paper
+    </a>
+    <a href="javascript:void(0);" target="_blank">
+      <i class="bi bi-github"></i> Code
+    </a>
+  </div>
+</div>
+
+<div class="publication-item">
+  <div class="publication-title">
     <h3>Multi-Marginal f-Divergence Schrödinger Bridges: Towards a Unifying Framework for Generation and Distillation</h3>
     <button class="abstract-btn">Abstract</button>
   </div>
